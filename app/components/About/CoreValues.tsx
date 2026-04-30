@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import { MotionItem, MotionCard } from "../MotionSection";
 import { FaHeart, FaAward, FaUsers, FaStar, FaShieldAlt, FaLeaf } from "react-icons/fa";
 

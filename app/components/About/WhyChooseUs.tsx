@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import { MotionItem, MotionCard } from "../MotionSection";
 
 export default function WhyChooseUs() {
