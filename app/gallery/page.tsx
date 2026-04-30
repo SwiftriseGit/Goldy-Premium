@@ -1,10 +1,11 @@
 ﻿"use client";
 
-import { motion } from "framer-motion";
 import { useState } from "react";
-import Image from "next/image";
-import { MotionSection, MotionItem } from "../components/MotionSection";
-import { FaCameraRetro } from "react-icons/fa";
+import HeroSection from "../components/Gallery/HeroSection";
+import FilterButtons from "../components/Gallery/FilterButtons";
+import GalleryGrid from "../components/Gallery/GalleryGrid";
+import ResultsCount from "../components/Gallery/ResultsCount";
+import CTASection from "../components/Gallery/CTASection";
 
 const categories = ["All", "Rooms", "Hotel", "Bathrooms", "Wedding", "Flowers"];
 
@@ -60,171 +61,19 @@ export default function Gallery() {
     );
   };
 
-  const filteredImages = activeCategory === "All" 
+  const filteredImages = activeCategory === "All"
     ? getAllImages()
     : getAllImages().filter(img => img.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-[#FEFAE0]">
-      {/* Hero Section */}
-      <motion.section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden bg-linear-to-b from-[#732824] to-[#4a1a18]" initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
-        <div className="absolute inset-0 opacity-5" style={{backgroundImage: "radial-gradient(circle, #bfa76a 1px, transparent 1px)", backgroundSize: "30px 30px"}} />
-
-        <motion.div
-          className="relative z-10 text-center px-4 max-w-4xl"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.div
-            className="inline-flex items-center gap-3 text-[#bfa76a] text-sm tracking-[0.3em] uppercase font-bold mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <FaCameraRetro className="text-2xl" />
-            Visual Journey
-          </motion.div>
-          <motion.h1
-            className="font-serif text-5xl md:text-7xl font-black text-white mb-6 drop-shadow-2xl"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            Our <span className="text-[#bfa76a] italic">Gallery</span>
-          </motion.h1>
-          <motion.div
-            className="flex items-center justify-center gap-4 mb-6"
-            initial={{ opacity: 0, scaleX: 0 }}
-            animate={{ opacity: 1, scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <div className="w-16 h-px bg-[#bfa76a]" />
-            <span className="text-[#bfa76a] text-xl">✦</span>
-            <div className="w-16 h-px bg-[#bfa76a]" />
-          </motion.div>
-          <motion.p
-            className="text-white/90 text-lg md:text-xl font-serif max-w-2xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            Explore our beautiful spaces, elegant details, and memorable moments captured in time.
-          </motion.p>
-        </motion.div>
-      </motion.section>
-
-      {/* Filter Categories */}
-      <motion.section className="w-full max-w-7xl mx-auto py-12 px-4" initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
-        <MotionSection direction="scale">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category, i) => (
-              <motion.button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-8 py-3 rounded-full font-semibold tracking-wider uppercase transition-all ${
-                  activeCategory === category
-                    ? "bg-[#732824] text-white shadow-lg"
-                    : "bg-white border-2 border-[#bfa76a]/30 text-[#732824] hover:border-[#bfa76a]"
-                }`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {category}
-              </motion.button>
-            ))}
-          </div>
-        </MotionSection>
-
-        {/* Gallery Grid */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-          layout
-        >
-          {filteredImages.map((item, i) => (
-            <motion.div
-              key={item.id}
-              layout
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.8 }}
-              transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer aspect-square"
-              whileHover={{ y: -8 }}
-            >
-              <div className="relative w-full h-full">
-                <Image
-                  src={item.src}
-                  alt={`${item.category} ${i + 1}`}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-              </div>
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end p-6">
-                <motion.div
-                  className="w-full h-1 bg-[#bfa76a] mb-3"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-                <FaCameraRetro className="text-[#bfa76a] text-2xl mb-2" />
-                <span className="text-white font-semibold text-lg">{item.category}</span>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Results Count */}
-        <MotionItem delay={0.3}>
-          <div className="text-center mt-12">
-            <p className="text-[#7c6f57] font-serif text-lg">
-              Showing {filteredImages.length} {filteredImages.length === 1 ? "photo" : "photos"}
-              {activeCategory !== "All" && ` in ${activeCategory}`}
-            </p>
-          </div>
-        </MotionItem>
-      </motion.section>
-
-      {/* CTA Section */}
-      <motion.section className="w-full bg-linear-to-r from-[#732824] to-[#732824] py-16" initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
-        <div className="w-full max-w-4xl mx-auto px-4 text-center">
-          <MotionItem delay={0}>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
-              Want to Experience It Yourself?
-            </h2>
-          </MotionItem>
-          <MotionItem delay={0.2}>
-            <p className="text-white/80 text-lg mb-8">
-              Book your stay and create your own beautiful memories at Hotel Goldy Premium.
-            </p>
-          </MotionItem>
-          <MotionItem delay={0.4}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.a
-                href="/rooms"
-                className="bg-[#bfa76a] text-[#732824] font-bold rounded-full px-10 py-4 text-lg shadow-xl tracking-wider uppercase"
-                whileHover={{ scale: 1.05, backgroundColor: "#ffffff" }}
-                whileTap={{ scale: 0.97 }}
-              >
-                View Rooms
-              </motion.a>
-              <motion.a
-                href="/contact"
-                className="bg-transparent border-2 border-white text-white font-bold rounded-full px-10 py-4 text-lg shadow-xl tracking-wider uppercase"
-                whileHover={{ scale: 1.05, backgroundColor: "white", color: "#732824" }}
-                whileTap={{ scale: 0.97 }}
-              >
-                Contact Us
-              </motion.a>
-            </div>
-          </MotionItem>
-        </div>
-      </motion.section>
+      <HeroSection />
+      <FilterButtons categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+      <section className="w-full max-w-7xl mx-auto py-4 px-4">
+        <GalleryGrid images={filteredImages} />
+        <ResultsCount count={filteredImages.length} activeCategory={activeCategory} />
+      </section>
+      <CTASection />
     </div>
   );
 }

@@ -20,44 +20,7 @@ export default function Footer() {
             <p className="text-white/80 text-sm leading-relaxed mb-4">
               Experience luxury and comfort in the heart of Jeypore. Your perfect stay awaits with world-class amenities and exceptional hospitality.
             </p>
-            <div className="flex gap-3 mt-2">
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#bfa76a] flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Facebook"
-              >
-                <FaFacebookF className="text-white" />
-              </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#bfa76a] flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Instagram"
-              >
-                <FaInstagram className="text-white" />
-              </a>
-              <a 
-                href="https://twitter.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#bfa76a] flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="Twitter"
-              >
-                <FaTwitter className="text-white" />
-              </a>
-              <a 
-                href="https://wa.me/918093261999" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#25D366] flex items-center justify-center transition-all duration-300 hover:scale-110"
-                aria-label="WhatsApp"
-              >
-                <FaWhatsapp className="text-white" />
-              </a>
-            </div>
+            
           </div>
 
           {/* Quick Links */}
@@ -176,13 +139,7 @@ export default function Footer() {
             <p>&copy; {new Date().getFullYear()} Swiftrise solution Pvt Ltd. All rights reserved.</p>
             <p className="text-xs mt-1 italic text-[#bfa76a]/80">&ldquo;Where luxury meets comfort, and memories are made.&rdquo;</p>
           </div>
-          <div className="flex gap-6 text-xs text-white/70">
-            <a href="/privacy-policy" className="hover:text-[#bfa76a] transition-colors">Privacy Policy</a>
-            <span>|</span>
-            <a href="/terms" className="hover:text-[#bfa76a] transition-colors">Terms & Conditions</a>
-            <span>|</span>
-            <a href="/sitemap" className="hover:text-[#bfa76a] transition-colors">Sitemap</a>
-          </div>
+           
         </div>
       </div>
 

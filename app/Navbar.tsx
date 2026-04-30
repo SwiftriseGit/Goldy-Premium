@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "./usePathnameClient";
+import { usePathname } from "./components/usePathnameClient";
 
 import { useEffect, useState } from "react";
 import { text } from "stream/consumers";
