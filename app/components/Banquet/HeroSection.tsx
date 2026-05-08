@@ -9,7 +9,7 @@ export default function HeroSection() {
     <motion.section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.9 }}>
       <div className="absolute inset-0">
         <Image
-          src="https://images.unsplash.com/photo-1519167758481-83f29da8c1a1?q=80&w=1170&auto=format&fit=crop"
+          src="/img15.jpg"
           alt="Banquet Hall"
           fill
           className="object-cover"

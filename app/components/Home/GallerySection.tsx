@@ -36,10 +36,10 @@ export default function GallerySection() {
         </div>
         <MotionSection direction="scale">
           <GalleryGrid images={[
-            {src: "https://images.unsplash.com/photo-1592229505678-cf99a9908e03?q=80&w=1074&auto=format&fit=crop", alt: "Lobby"},
-            {src: "https://images.unsplash.com/photo-1560185128-e173042f79dd?q=80&w=1111&auto=format&fit=crop", alt: "Banquet"},
-            {src: "https://images.unsplash.com/photo-1612645213559-6af1d4edeaf8?q=80&w=1170&auto=format&fit=crop", alt: "Suite"},
-            {src: "https://images.unsplash.com/photo-1746549859840-808544238d42?q=80&w=1170&auto=format&fit=crop", alt: "Room"},
+            {src: "/img1.jpg", alt: "Lobby"},
+            {src: "/img4.jpg", alt: "Banquet"},
+            {src: "/img11.jpg", alt: "Suite"},
+            {src: "/img12.jpg", alt: "Room"},
           ]} />
         </MotionSection>
         <MotionItem delay={0.4} className="mt-8 flex justify-center">

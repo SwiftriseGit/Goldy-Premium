@@ -11,25 +11,21 @@ const categories = ["All", "Rooms", "Hotel", "Bathrooms", "Wedding", "Flowers"];
 
 const images = {
   Rooms: [
-    "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1170&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1540518614846-7eded433c457?q=80&w=1157&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1734549547895-1901eeace834?q=80&w=1171&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1736194024175-b5e553effe21?q=80&w=1171&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1689609949898-5f7a10649fef?q=80&w=1170&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1736194029441-251abe24932b?q=80&w=1170&auto=format&fit=crop"
+    "/img1.jpg",
+    "/img3.jpg",
+    "/img7.jpg",
+    "/img11.jpg",
+    "/img6.jpg",
+    "/img5.jpg"
   ],
   Hotel: [
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1170&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1687960117014-f6463f5b419a?q=80&w=1170&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1687960116574-782d09070294?q=80&w=1171&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1687960116553-52e1b0cbb071?q=80&w=1170&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?q=80&w=1171&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1687960116836-0eb19ff4fcca?q=80&w=1170&auto=format&fit=crop"
+    "/img14.jpg",
+    "/img9.jpg",
+    "/img12.jpg",
+    "/img4.jpg"
   ],
   Bathrooms: [
-    "https://images.unsplash.com/photo-1763485956070-431fca7bc030?q=80&w=1170&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1621420621125-c63db35851cb?q=80&w=1170&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1663091257768-8f089bf6b4fa?q=80&w=1170&auto=format&fit=crop",
+    "/img8.jpg",
     "https://plus.unsplash.com/premium_photo-1733514433307-f337be80b0f4?q=80&w=1171&auto=format&fit=crop",
     "https://plus.unsplash.com/premium_photo-1686316980239-935d5ccba3ef?q=80&w=1171&auto=format&fit=crop",
     "https://plus.unsplash.com/premium_photo-1675744019180-8c7cda9af3e2?q=80&w=1170&auto=format&fit=crop"
