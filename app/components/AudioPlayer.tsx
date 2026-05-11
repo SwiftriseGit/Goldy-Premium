@@ -311,7 +311,7 @@ export default function AudioPlayer() {
                       >
                         <p>Hotel Owner & Managing Director</p>
                         <p className="text-gray-500 text-xs italic">
-                          30+ Years in Hospitality Industry
+                          10+ Years in the Hotel Goldy Premium .
                         </p>
                         <p className="text-gray-400 text-xs mt-2">
                           Based in Resort City — available for consultations and
