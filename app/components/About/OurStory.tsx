@@ -57,7 +57,7 @@ export default function OurStory() {
               transition={{ delay: 0.5, type: "spring", bounce: 0.4 }}
             >
               <div className="text-center">
-                <div className="text-4xl font-black text-[#bfa76a]">5+</div>
+                <div className="text-4xl font-black text-[#bfa76a]">10+</div>
                 <div className="text-xs uppercase tracking-wider">Years Excellence</div>
               </div>
             </motion.div>
