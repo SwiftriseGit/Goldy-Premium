@@ -212,22 +212,23 @@ export default function AudioPlayer() {
             className="fixed right-4 top-[15%] z-[99] w-96 max-h-[70vh] bg-gradient-to-br from-[#1a1a1a] to-[#2a2520] rounded-2xl shadow-2xl shadow-[#bfa76a]/20 border border-[#bfa76a]/30 overflow-hidden"
           >
             {/* Card Header */}
-            <div className="bg-gradient-to-r from-[#bfa76a] to-[#8b7355] p-4 sticky top-0 z-10">
+            <div className="bg-[#6d2622] p-4 sticky top-0 z-10">
               {/*
                 Header layout: icon + title centered.
                 - Icon: simple building/hotel SVG for visual cue.
                 - Title: hotel name.
               */}
-              <div className="flex items-center justify-center space-x-3">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M3 21h18v-2H3v2zm2-4h14V5H5v12zm2-10h2v2H7V7zm4 0h2v2h-2V7zm4 0h2v2h-2V7z" />
-                </svg>
-                <h3 className="text-white font-bold text-xl">
+              <div className="flex flex-col items-center space-y-2">
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="/LOGO (1).png"
+                    alt="Hotel Goldy Premium"
+                    width={160}
+                    height={96}
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="text-white font-bold text-xl text-center">
                   Hotel Goldy Premium
                 </h3>
               </div>
