@@ -273,7 +273,7 @@ export default function AudioPlayer() {
                 <div className="text-center space-y-2">
                   <div className="flex items-center justify-center space-x-2">
                     <h4 className="text-[#bfa76a] font-bold text-lg">
-                      Minati Das
+                     Miss.Minati Das
                     </h4>
                     <button
                       onClick={() => setShowOwnerDetails(!showOwnerDetails)}

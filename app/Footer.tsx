@@ -13,11 +13,9 @@ export default function Footer() {
           {/* About Section */}
           <div className="flex flex-col">
             <div className="flex items-center gap-2 mb-4">
-              <FaHotel className="text-[#bfa76a] text-2xl" />
-              <h3 className="font-serif text-2xl font-bold text-[#bfa76a]">Hotel Goldy Premium</h3>
+               <img src="/LOGO (1).png" alt="Hotel Goldy Premium" className="h-24 w-auto object-contain" />
             </div>
-            <div className="w-16 h-1 bg-[#bfa76a] mb-4 rounded"></div>
-            <p className="text-white/80 text-sm leading-relaxed mb-4">
+             <p className="text-white/80 text-sm leading-relaxed mb-4">
               Experience luxury and comfort in the heart of Jeypore. Your perfect stay awaits with world-class amenities and exceptional hospitality.
             </p>
             
