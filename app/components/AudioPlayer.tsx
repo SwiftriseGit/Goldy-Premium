@@ -422,7 +422,7 @@ export default function AudioPlayer() {
                     “Luxury redefined, comfort perfected”
                   </p>
                   <p className="text-gray-500 text-xs text-center">
-                    Established Since 2016 - Serving Excellence for Over 10
+                    Established Since 2016 - Serving Excellence for Over 10+
                     Years
                   </p>
                 </div>
