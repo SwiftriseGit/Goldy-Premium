@@ -136,7 +136,13 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-white/70 text-sm text-center md:text-left">
-            <p>&copy; {new Date().getFullYear()} Swiftrise solution Pvt Ltd. All rights reserved.</p>
+            <p>
+              &copy; {new Date().getFullYear()}{' '}
+              <a href="https://swiftrise.in/" target="_blank" rel="noopener noreferrer" className="text-[#bfa76a] hover:underline">
+                Swiftrise solution Pvt Ltd
+              </a>
+              . All rights reserved.
+            </p>
             <p className="text-xs mt-1 italic text-[#bfa76a]/80">&ldquo;Where luxury meets comfort, and memories are made.&rdquo;</p>
           </div>
            
