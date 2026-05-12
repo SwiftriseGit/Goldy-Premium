@@ -5,38 +5,38 @@ import { useState } from "react";
 import Image from "next/image";
 import { MotionSection, MotionItem, MotionCard } from "../components/MotionSection";
 import { BedIllustration, DecorativePattern } from "../components/Illustrations";
-import { FaBed, FaWifi, FaTv, FaSnowflake, FaCoffee, FaShower, FaCouch, FaConciergeBell, FaCheckCircle, FaUsers, FaDoorOpen } from "react-icons/fa";
+import { FaBed, FaWifi, FaTv, FaSnowflake, FaCoffee, FaShower, FaCouch, FaConciergeBell, FaCheckCircle, FaUsers, FaDoorOpen, FaExclamationTriangle } from "react-icons/fa";
 
-const categories = ["All", "Economy", "Deluxe", "Premium", "Family"];
+const categories = ["All", "Economy", "Deluxe", "Premium"];
 
 const roomsData = [
   // Economy Category
   {
     category: "Economy",
-    name: "Standard Single Room",
+    name: "Standard AC Room",
     image: "/img1.jpg",
-    price: "₹1,499",
+    price: "₹1,400",
     size: "200 sq ft",
-    occupancy: "1 Adult",
+    occupancy: "2 Adults",
     features: ["Single Bed", "Free WiFi", "LED TV", "AC", "Attached Bathroom"],
     badge: null
   },
   {
     category: "Economy",
-    name: "Standard Double Room",
+    name: "Standard Non-AC Room",
     image: "/img3.jpg",
-    price: "₹1,999",
+    price: "₹1,300",
     size: "250 sq ft",
     occupancy: "2 Adults",
-    features: ["Double Bed", "Free WiFi", "LED TV", "AC", "Room Service"],
+    features: ["Double Bed", "Free WiFi", "LED TV", "Non-AC", "Room Service"],
     badge: "Budget Friendly"
   },
   // Deluxe Category
   {
     category: "Deluxe",
-    name: "Deluxe Room",
+    name: "Deluxe AC Room",
     image: "/img5.jpg",
-    price: "₹2,999",
+    price: "₹1,500",
     size: "300 sq ft",
     occupancy: "2 Adults",
     features: ["King Size Bed", "Free WiFi", "LED TV", "AC", "Room Service", "Complimentary Breakfast"],
@@ -44,12 +44,12 @@ const roomsData = [
   },
   {
     category: "Deluxe",
-    name: "Deluxe Twin Room",
+    name: "Deluxe Non-Room",
     image: "/img6.jpg",
-    price: "₹3,499",
+    price: "₹1,300",
     size: "320 sq ft",
     occupancy: "2-3 Adults",
-    features: ["2 Single Beds", "Premium WiFi", "Smart TV", "AC", "Breakfast", "Work Desk"],
+    features: ["2 Single Beds", "Premium WiFi", "Smart TV", "Non-AC", "Breakfast", "Work Desk"],
     badge: null
   },
   // Premium Category
@@ -57,9 +57,9 @@ const roomsData = [
     category: "Premium",
     name: "Executive Suite",
     image: "/img7.jpg",
-    price: "₹4,999",
+    price: "₹1,400",
     size: "450 sq ft",
-    occupancy: "2-3 Adults",
+    occupancy: "2 Adults",
     features: ["King Bed + Sofa", "Premium WiFi", "Smart TV", "AC", "Mini Bar", "Breakfast & Dinner", "Work Desk"],
     badge: "Most Popular"
   },
@@ -67,7 +67,7 @@ const roomsData = [
     category: "Premium",
     name: "Premium Suite",
     image: "/img11.jpg",
-    price: "₹5,999",
+    price: "₹1,500",
     size: "500 sq ft",
     occupancy: "3 Adults",
     features: ["King Bed + Couch", "High-Speed WiFi", "4K TV", "Central AC", "Minibar", "All Meals", "Study Area", "Balcony"],
@@ -239,6 +239,18 @@ export default function Rooms() {
                     <span className="text-[#7c6f57]">/ night</span>
                   </div>
 
+                  <div className="mt-4 mb-4">
+                    <div className="flex items-center gap-3 ">
+                      <div className="flex-shrink-0 bg-[#bfa76a] text-white rounded-full w-6 h-6 flex items-center justify-center">
+                        <FaExclamationTriangle className="text-white" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-bold text-[#732824]">Important</p>
+                        <p className="text-xs text-[#7c6f57]">Extra Guest Charges: Non-AC ₹200 , A/C ₹300</p>
+                      </div>
+                    </div>
+                  </div>
+
                   <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                     <div className="flex items-center gap-2 text-[#7c6f57]">
                       <FaDoorOpen className="text-[#bfa76a]" />
@@ -277,6 +289,7 @@ export default function Rooms() {
             </p>
           </div>
         </MotionItem>
+          
       </motion.section>
 
       {/* Amenities Section */}

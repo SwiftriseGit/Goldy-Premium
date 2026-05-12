@@ -7,7 +7,7 @@ import GalleryGrid from "../components/Gallery/GalleryGrid";
 import ResultsCount from "../components/Gallery/ResultsCount";
 import CTASection from "../components/Gallery/CTASection";
 
-const categories = ["All", "Rooms", "Hotel", "Bathrooms", "Wedding", "Flowers"];
+const categories = ["All", "Rooms", "Hotel", "Bathrooms" ];
 
 const images = {
   Rooms: [

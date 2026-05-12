@@ -6,10 +6,10 @@ import { MotionSection, MotionCard } from "../MotionSection";
 import { FaUsers } from "react-icons/fa";
 
 const events = [
-  { title: "Wedding Receptions", image: "https://images.unsplash.com/photo-1519167758481-83f29da8c1a1?q=80&w=1170&auto=format&fit=crop", capacity: "150-300", color: "#732824" },
-  { title: "Corporate Events", image: "https://images.unsplash.com/photo-1511795409834-432f7b1728c2?q=80&w=1169&auto=format&fit=crop", capacity: "50-200", color: "#732824" },
-  { title: "Birthday Parties", image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=1170&auto=format&fit=crop", capacity: "30-100", color: "#bfa76a" },
-  { title: "Anniversary Celebrations", image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1169&auto=format&fit=crop", capacity: "50-150", color: "#4a1a18" }
+  { title: "Wedding Receptions", image: "https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", capacity: "150-300", color: "#732824" },
+  { title: "Corporate Events", image: "https://plus.unsplash.com/premium_photo-1664474653221-8412b8dfca3e?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", capacity: "50-200", color: "#732824" },
+  { title: "Birthday Parties", image: "https://plus.unsplash.com/premium_photo-1663839412026-51a44cfadfb8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", capacity: "30-100", color: "#bfa76a" },
+  { title: "Anniversary Celebrations", image: "https://images.unsplash.com/photo-1707831853477-545a84511e57?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", capacity: "50-150", color: "#4a1a18" }
 ];
 
 export default function EventsSection() {
