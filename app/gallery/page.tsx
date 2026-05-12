@@ -25,27 +25,8 @@ const images = {
     "/img4.jpg"
   ],
   Bathrooms: [
-    "/img8.jpg",
-    "https://plus.unsplash.com/premium_photo-1733514433307-f337be80b0f4?q=80&w=1171&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1686316980239-935d5ccba3ef?q=80&w=1171&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1675744019180-8c7cda9af3e2?q=80&w=1170&auto=format&fit=crop"
-  ],
-  Wedding: [
-    "https://images.unsplash.com/photo-1639945506968-3dea2042c861?q=80&w=1170&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1542042161784-26ab9e041e89?q=80&w=1170&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1661317241247-08599f9869ca?q=80&w=1170&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1706182985081-8a82d4156d7e?q=80&w=1169&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1669198876377-f38260abe500?q=80&w=1170&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1682092029189-ec5d08a8dbdd?q=80&w=1170&auto=format&fit=crop"
-  ],
-  Flowers: [
-    "https://images.unsplash.com/photo-1652540795425-e884e5747607?q=80&w=1110&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1515051124667-90dabc5aff59?q=80&w=1170&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1682098435089-21d9dbb67fcd?q=80&w=1169&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1700581724273-33cbe88da487?q=80&w=1170&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1769871947521-a9a36f6bdbda?q=80&w=1152&auto=format&fit=crop",
-    "https://plus.unsplash.com/premium_photo-1700581724273-33cbe88da487?q=80&w=1170&auto=format&fit=crop"
-  ]
+    "/img8.jpg" 
+  ]  
 };
 
 export default function Gallery() {
