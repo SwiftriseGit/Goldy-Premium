@@ -14,7 +14,7 @@ const roomsData = [
   {
     category: "Economy",
     name: "Standard Single Room",
-    image: "https://images.unsplash.com/photo-1631049035182-249067d7618e?q=80&w=1170&auto=format&fit=crop",
+    image: "/img1.jpg",
     price: "₹1,499",
     size: "200 sq ft",
     occupancy: "1 Adult",
@@ -24,7 +24,7 @@ const roomsData = [
   {
     category: "Economy",
     name: "Standard Double Room",
-    image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=1170&auto=format&fit=crop",
+    image: "/img3.jpg",
     price: "₹1,999",
     size: "250 sq ft",
     occupancy: "2 Adults",
@@ -35,7 +35,7 @@ const roomsData = [
   {
     category: "Deluxe",
     name: "Deluxe Room",
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1074&auto=format&fit=crop",
+    image: "/img5.jpg",
     price: "₹2,999",
     size: "300 sq ft",
     occupancy: "2 Adults",
@@ -45,7 +45,7 @@ const roomsData = [
   {
     category: "Deluxe",
     name: "Deluxe Twin Room",
-    image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=1170&auto=format&fit=crop",
+    image: "/img6.jpg",
     price: "₹3,499",
     size: "320 sq ft",
     occupancy: "2-3 Adults",
@@ -56,7 +56,7 @@ const roomsData = [
   {
     category: "Premium",
     name: "Executive Suite",
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1170&auto=format&fit=crop",
+    image: "/img7.jpg",
     price: "₹4,999",
     size: "450 sq ft",
     occupancy: "2-3 Adults",
@@ -66,44 +66,13 @@ const roomsData = [
   {
     category: "Premium",
     name: "Premium Suite",
-    image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1170&auto=format&fit=crop",
+    image: "/img11.jpg",
     price: "₹5,999",
     size: "500 sq ft",
     occupancy: "3 Adults",
     features: ["King Bed + Couch", "High-Speed WiFi", "4K TV", "Central AC", "Minibar", "All Meals", "Study Area", "Balcony"],
     badge: null
-  },
-  {
-    category: "Premium",
-    name: "Luxury Suite",
-    image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=1170&auto=format&fit=crop",
-    price: "₹7,999",
-    size: "600 sq ft",
-    occupancy: "4 Adults",
-    features: ["2 Queen Beds", "High-Speed WiFi", "4K Smart TV", "Central AC", "Premium Minibar", "All Meals", "Living Area", "Bathtub"],
-    badge: "Premium"
-  },
-  // Family Category
-  {
-    category: "Family",
-    name: "Family Room",
-    image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1074&auto=format&fit=crop",
-    price: "₹6,499",
-    size: "550 sq ft",
-    occupancy: "4-5 Adults",
-    features: ["1 King + 2 Single Beds", "Free WiFi", "2 TVs", "AC", "Mini Fridge", "All Meals", "Connecting Rooms"],
-    badge: "Family Special"
-  },
-  {
-    category: "Family",
-    name: "Presidential Suite",
-    image: "https://plus.unsplash.com/premium_photo-1661964149725-fbf14eabd38c?q=80&w=1170&auto=format&fit=crop",
-    price: "₹12,999",
-    size: "800 sq ft",
-    occupancy: "6 Adults",
-    features: ["2 King Beds", "Ultra-Fast WiFi", "Multiple 4K TVs", "Central AC", "Full Kitchen", "All Meals", "2 Bathrooms", "Private Terrace"],
-    badge: "Luxury"
-  }
+  } 
 ];
 
 const amenities = [
