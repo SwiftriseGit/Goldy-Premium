@@ -19,23 +19,13 @@ const roomsData = [
     badge: null
   },
   {
-    category: "Standard",
-    name: "Standard AC Room",
+    category: "Deluxe",
+    name: "Deluxe AC Room",
     image: "/img1.jpg",
     price: "₹1,700",
     size: "200 sq ft",
     occupancy: "2 Adults",
     features: ["Single Bed", "Free WiFi", "LED TV", "AC", "Attached Bathroom"],
-    badge: null
-  },
-  {
-    category: "Deluxe",
-    name: "Deluxe AC Room",
-    image: "/img11.jpg",
-    price: "₹2,500",
-    size: "300 sq ft",
-    occupancy: "2 Adults, 1 Child",
-    features: ["King Size Bed", "Free WiFi", "Smart TV", "AC", "Mini Fridge"],
     badge: "Most Popular"
   }
 ];
