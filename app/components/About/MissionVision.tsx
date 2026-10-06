@@ -8,9 +8,9 @@ export default function MissionVision() {
   return (
     <motion.section 
       className="w-full bg-linear-to-b from-[#732824] to-[#4a1a18] py-20 relative overflow-hidden"
-      initial={{ opacity: 0, x: -100 }}
+      initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="absolute inset-0 opacity-5" style={{backgroundImage: "radial-gradient(circle, #bfa76a 1px, transparent 1px)", backgroundSize: "30px 30px"}} />

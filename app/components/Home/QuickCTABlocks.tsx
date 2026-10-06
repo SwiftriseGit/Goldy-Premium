@@ -2,16 +2,16 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MotionCard } from "../MotionSection";
-import { FaBed, FaGlassCheers, FaPhoneAlt } from "react-icons/fa";
+import { FaBed, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 import { BedIllustration, ChampagneIllustration, ServiceBellIllustration } from "../Illustrations";
 
 export default function QuickCTABlocks() {
   return (
     <motion.section
       className="w-full max-w-6xl mx-auto mb-20 px-4 relative"
-      initial={{ opacity: 0, y: 100, scale: 0.9, rotateX: 10 }}
+      initial={{ opacity: 0, y: 20, scale: 0.98, rotateX: 10 }}
       whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       <div className="absolute top-0 left-0 opacity-15 pointer-events-none">
@@ -23,20 +23,18 @@ export default function QuickCTABlocks() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 relative z-10">
         {[
           { href: '/rooms', icon: <FaBed size={36} />, title: 'Luxury Rooms', desc: 'Explore our curated collection of suites crafted for your comfort.', cta: 'View Rooms', illustration: <BedIllustration className="w-full h-32 mb-4" /> },
-          { href: '/banquet', icon: <FaGlassCheers size={36} />, title: 'Banquet Hall', desc: 'Host weddings, receptions, and corporate events in grand style.', cta: 'Book Event', illustration: <ChampagneIllustration className="w-full h-32 mb-4" /> },
+          { href: 'https://wa.me/918984909990?text=Hello%2C%20I%20would%20like%20to%20book%20a%20room%20at%20Hotel%20Goldy%20Premium.', icon: <FaWhatsapp size={36} />, title: 'Book via WhatsApp', desc: 'Instantly connect with us on WhatsApp to reserve your room.', cta: 'Book Now', illustration: <ChampagneIllustration className="w-full h-32 mb-4" />, external: true },
           { href: '/contact', icon: <FaPhoneAlt size={36} />, title: 'Get In Touch', desc: 'Our team is available 24/7 to assist with any inquiry.', cta: 'Contact Us', illustration: <ServiceBellIllustration className="w-full h-32 mb-4" /> },
         ].map((item, i) => (
           <MotionCard key={i} delay={i * 0.15}>
-            <a href={item.href} className="group relative overflow-hidden flex flex-col items-center text-center bg-white border border-[#bfa76a]/20 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 h-full">
+            <a href={item.href} {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="group relative overflow-hidden flex flex-col items-center text-center bg-white border border-[#bfa76a]/20 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300 h-full">
               <motion.div
                 className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-transparent via-[#bfa76a] to-transparent"
                 initial={{ scaleX: 0 }}
                 whileHover={{ scaleX: 1 }}
                 transition={{ duration: 0.4 }}
               />
-              <div className="opacity-80 mb-4">
-                {item.illustration}
-              </div>
+
               <motion.div
                 className="w-16 h-16 rounded-2xl bg-[#732824]/5 flex items-center justify-center text-[#bfa76a] mb-5 shadow"
                 whileHover={{ backgroundColor: "#732824", color: "#ffffff", rotate: 5 }}

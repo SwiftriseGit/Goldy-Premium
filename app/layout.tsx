@@ -4,7 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import CursorFollower from "./components/CursorFollower";
+
 import AudioPlayer from "./components/AudioPlayer";
 
 const geistSans = Geist({
@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Hotel Goldy Premium | Luxury Stay",
-  description: "Experience luxury and comfort at Hotel Goldy Premium. Book rooms, banquet halls and explore our world-class amenities.",
+  description: "Experience luxury and comfort at Hotel Goldy Premium. Book rooms and explore our world-class amenities.",
 };
 
 export default function RootLayout({
@@ -36,7 +36,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://plus.unsplash.com" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}>
-        <CursorFollower />
+
         <AudioPlayer />
         <Navbar />
         <div style={{ minHeight: '80vh ' }}>{children}</div>

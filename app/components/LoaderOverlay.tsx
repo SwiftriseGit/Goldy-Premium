@@ -39,19 +39,19 @@ export default function LoaderOverlay() {
         <motion.div
           className="absolute top-1/4 left-1/4 w-64 sm:w-96 h-64 sm:h-96 rounded-full bg-[#bfa76a] opacity-20 blur-[120px]"
           animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
-          transition={{ duration: 3, repeat: Infinity }}
+          transition={{ duration: 3}}
         />
         <motion.div
           className="absolute bottom-1/4 right-1/4 w-64 sm:w-96 h-64 sm:h-96 rounded-full bg-[#ffe9b0] opacity-20 blur-[120px]"
           animate={{ scale: [1.3, 1, 1.3], opacity: [0.4, 0.2, 0.4] }}
-          transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
+          transition={{ duration: 3, delay: 0.5 }}
         />
 
         <div className="relative z-10 flex flex-col items-center gap-6 sm:gap-8 w-full max-w-md">
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
-            transition={{ duration: 0.8, type: "spring", bounce: 0.5 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative"
           >
             <div className="relative w-48 h-48 flex items-center justify-center overflow-hidden">
@@ -78,7 +78,7 @@ export default function LoaderOverlay() {
 
           <motion.span
             className="inline-flex items-center gap-2 bg-[#bfa76a]/20 border border-[#bfa76a] text-[#bfa76a] text-xs sm:text-sm font-bold tracking-[0.25em] uppercase px-5 py-2 rounded-full mb-6 backdrop-blur-sm shadow"
-            initial={{ opacity: 0, y: -20, scale: 0.9 }}
+            initial={{ opacity: 0, y: -20, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
@@ -99,7 +99,7 @@ export default function LoaderOverlay() {
           <motion.p
             className="text-white/60 text-sm font-medium"
             animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
+            transition={{ duration: 1.5}}
           >
             Loading luxury experience... {loadingProgress}%
           </motion.p>
@@ -109,7 +109,7 @@ export default function LoaderOverlay() {
       <motion.div
         className="fixed top-4 sm:top-8 right-4 sm:right-8 w-24 sm:w-32 h-24 sm:h-32 rounded-full bg-[#bfa76a] opacity-30 blur-[60px] z-999 pointer-events-none"
         animate={{ scale: [1, 1.2, 1], rotate: [0, 360, 0], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 6, repeat: Infinity }}
+        transition={{ duration: 6}}
       />
 
       <motion.div
@@ -119,7 +119,7 @@ export default function LoaderOverlay() {
           "linear-gradient(90deg, #ffe9b0 0%, #bfa76a 50%, #ffe9b0 100%)",
           "linear-gradient(90deg, #bfa76a 0%, #ffe9b0 50%, #bfa76a 100%)"
         ] }}
-        transition={{ duration: 4, repeat: Infinity }}
+        transition={{ duration: 4}}
         style={{ boxShadow: "0 0 32px 8px #bfa76a, 0 0 64px 16px #ffe9b0" }}
       />
     </>

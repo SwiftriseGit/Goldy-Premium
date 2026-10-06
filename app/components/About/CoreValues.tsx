@@ -16,9 +16,9 @@ export default function CoreValues() {
   return (
     <motion.section 
       className="w-full max-w-7xl mx-auto py-20 px-4"
-      initial={{ opacity: 0, x: -100 }}
+      initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="text-center mb-16">
@@ -43,7 +43,7 @@ export default function CoreValues() {
             <div className="bg-white border border-[#bfa76a]/20 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all h-full group">
               <motion.div
                 className="w-14 h-14 bg-[#732824] rounded-2xl flex items-center justify-center text-[#bfa76a] text-2xl mb-5 group-hover:bg-[#bfa76a] group-hover:text-[#732824] transition-colors"
-                whileHover={{ rotate: 360, scale: 1.1 }}
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.5 }}
               >
                 {value.icon}

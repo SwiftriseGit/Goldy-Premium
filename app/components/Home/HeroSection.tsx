@@ -3,9 +3,9 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { FaBed, FaGlassCheers, FaHotel } from "react-icons/fa";
+import { FaBed, FaWhatsapp, FaHotel } from "react-icons/fa";
 
-const ParticleField = dynamic(() => import("../ParticleField"), { ssr: false });
+
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLElement>(null);
@@ -17,7 +17,7 @@ export default function HeroSection() {
     <motion.section
       ref={heroRef}
       className="relative w-full h-screen min-h-[500px] sm:min-h-155 max-h-225 flex items-center justify-center overflow-hidden mb-0"
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 15 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
@@ -35,7 +35,7 @@ export default function HeroSection() {
 
       <div className="absolute inset-0 z-10 bg-linear-to-b from-black/65 via-black/40 to-black/75" />
 
-      <ParticleField />
+
 
       <motion.div
         className="absolute top-22 left-1/2 -translate-x-1/2 h-0.5 bg-[#bfa76a] z-20 rounded-full"
@@ -52,7 +52,7 @@ export default function HeroSection() {
         <motion.h1
           className="font-serif font-black text-white text-5xl sm:text-7xl md:text-8xl leading-tight mb-4 drop-shadow-2xl"
           style={{ letterSpacing: "0.04em" }}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.55, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
@@ -90,16 +90,18 @@ export default function HeroSection() {
             href="/rooms"
             className="bg-[#732824] text-white font-bold rounded-full px-8 py-3 sm:px-12 sm:py-4 text-base sm:text-lg shadow-xl tracking-wider uppercase border-2 border-transparent"
             whileHover={{ scale: 1.05, backgroundColor: "#bfa76a", borderColor: "#bfa76a" }}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ scale: 0.987 }}
             transition={{ duration: 0.2 }}
           >
             Explore Rooms
           </motion.a>
           <motion.a
-            href="/contact"
+            href="https://wa.me/918984909990?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20room%20at%20Hotel%20Goldy%20Premium."
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-transparent border-2 border-[#bfa76a] text-[#bfa76a] font-bold rounded-full px-8 py-3 sm:px-12 sm:py-4 text-base sm:text-lg shadow-xl tracking-wider uppercase"
             whileHover={{ scale: 1.05, backgroundColor: "#bfa76a", color: "#fff" }}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ scale: 0.987 }}
             transition={{ duration: 0.2 }}
           >
             Book Now
@@ -114,7 +116,6 @@ export default function HeroSection() {
         >
           {[
             { icon: <FaBed size={20} />, label: "Luxury Rooms" },
-            { icon: <FaGlassCheers size={20} />, label: "Banquet Hall" },
             { icon: <FaHotel size={20} />, label: "5-Star Service" },
           ].map((item, i) => (
             <motion.div
@@ -144,7 +145,7 @@ export default function HeroSection() {
         <motion.div
           className="w-px h-10 bg-linear-to-b from-[#bfa76a] to-transparent"
           animate={{ scaleY: [1, 0.4, 1], opacity: [0.7, 0.3, 0.7] }}
-          transition={{ duration: 1.8, repeat: Infinity }}
+          transition={{ duration: 1.8}}
         />
       </motion.div>
 

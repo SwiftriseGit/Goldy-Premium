@@ -24,7 +24,7 @@ export default function HeroSection() {
 
       <motion.div
         className="relative z-10 text-center px-4 max-w-4xl"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
@@ -67,7 +67,7 @@ export default function HeroSection() {
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        transition={{ duration: 2}}
       >
         <span className="text-white/70 text-xs uppercase tracking-wider">Scroll</span>
         <div className="w-px h-12 bg-linear-to-b from-[#bfa76a] to-transparent" />

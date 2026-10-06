@@ -9,9 +9,9 @@ export default function BanquetHalls() {
   return (
     <motion.section
       className="w-full mb-20 max-w-6xl mx-auto px-4 relative"
-      initial={{ opacity: 0, y: 100, scale: 0.9, rotateX: 10 }}
+      initial={{ opacity: 0, y: 20, scale: 0.98, rotateX: 10 }}
       whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       <div className="flex flex-col items-center mb-12">
@@ -58,7 +58,7 @@ export default function BanquetHalls() {
           href="/banquet"
           className="inline-flex items-center gap-2 border-2 border-[#732824] text-[#732824] font-bold rounded-full px-8 py-3 tracking-widest uppercase text-sm"
           whileHover={{ backgroundColor: "#732824", color: "#ffffff", scale: 1.04 }}
-          whileTap={{ scale: 0.97 }}
+          whileTap={{ scale: 0.987 }}
           transition={{ duration: 0.2 }}
         >
           View All Halls

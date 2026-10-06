@@ -14,9 +14,9 @@ export default function GalleryGrid({ images }: { images: { src: string; categor
         <motion.div
           key={item.id}
           layout
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.988 }}
           animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.8 }}
+          exit={{ opacity: 0, scale: 0.988 }}
           transition={{ duration: 0.5, delay: i * 0.05 }}
           className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer aspect-square"
           whileHover={{ y: -8 }}

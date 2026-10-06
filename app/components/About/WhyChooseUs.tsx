@@ -15,9 +15,9 @@ export default function WhyChooseUs() {
   return (
     <motion.section 
       className="w-full bg-[#FEFAE0] py-20 relative"
-      initial={{ opacity: 0, x: -100 }}
+      initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="w-full max-w-6xl mx-auto px-4 relative z-10">

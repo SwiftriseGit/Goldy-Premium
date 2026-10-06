@@ -113,11 +113,11 @@ export default function AudioPlayer() {
       <motion.button
         onClick={togglePlay}
         className="fixed right-4 top-1/2 -translate-y-1/2 z-[100] w-12 h-12 rounded-full bg-gradient-to-br from-[#bfa76a] to-[#8b7355] shadow-lg shadow-[#bfa76a]/30 flex items-center justify-center group hover:scale-110 transition-transform"
-        initial={{ x: 100, opacity: 0 }}
+        initial={{ x: 20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.6 }}
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
+        whileTap={{ scale: 0.985 }}
         title={isPlaying ? "Pause music" : "Play music"}
       >
         {isPlaying ? (
@@ -148,19 +148,7 @@ export default function AudioPlayer() {
           </svg>
         )}
 
-        {/* Pulse animation when playing */}
-        {isPlaying && (
-          <motion.div
-            className="absolute inset-0 rounded-full border-2 border-[#bfa76a]"
-            initial={{ scale: 1, opacity: 0.5 }}
-            animate={{ scale: 1.5, opacity: 0 }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeOut",
-            }}
-          />
-        )}
+
       </motion.button>
 
       {/*
@@ -171,11 +159,11 @@ export default function AudioPlayer() {
       <motion.button
         onClick={() => setIsExpanded(!isExpanded)}
         className="fixed right-4 top-1/2 translate-y-10 z-[100] w-12 h-12 rounded-full bg-gradient-to-br from-[#bfa76a] to-[#8b7355] shadow-lg shadow-[#bfa76a]/30 flex items-center justify-center hover:scale-110 transition-transform"
-        initial={{ x: 100, opacity: 0 }}
+        initial={{ x: 20, opacity: 0 }}
         animate={{ x: 0, opacity: 1, rotate: isExpanded ? 180 : 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
+        whileTap={{ scale: 0.985 }}
         aria-label={isExpanded ? "Close hotel info" : "Open hotel info"}
       >
         {/* Chevron Down Icon */}

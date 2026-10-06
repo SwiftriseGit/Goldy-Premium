@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function CTASection() {
   return (
-    <motion.section className="w-full bg-linear-to-r from-[#732824] to-[#732824] py-16" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.9 }}>
+    <motion.section className="w-full bg-linear-to-r from-[#732824] to-[#732824] py-16" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.9 }}>
       <div className="w-full max-w-4xl mx-auto px-4 text-center">
         <MotionItem delay={0}>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
@@ -23,7 +23,7 @@ export default function CTASection() {
               href="/contact"
               className="bg-[#bfa76a] text-[#732824] font-bold rounded-full px-10 py-4 text-lg shadow-xl tracking-wider uppercase"
               whileHover={{ scale: 1.05, backgroundColor: "#ffffff" }}
-              whileTap={{ scale: 0.97 }}
+              whileTap={{ scale: 0.987 }}
             >
               Contact Us
             </motion.a>
@@ -31,7 +31,7 @@ export default function CTASection() {
               href="tel:+918093261999"
               className="bg-transparent border-2 border-white text-white font-bold rounded-full px-10 py-4 text-lg shadow-xl tracking-wider uppercase"
               whileHover={{ scale: 1.05, backgroundColor: "white", color: "#732824" }}
-              whileTap={{ scale: 0.97 }}
+              whileTap={{ scale: 0.987 }}
             >
               Call Now
             </motion.a>

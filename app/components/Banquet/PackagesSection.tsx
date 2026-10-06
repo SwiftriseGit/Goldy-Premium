@@ -13,7 +13,7 @@ const packages = [
 
 export default function PackagesSection() {
   return (
-    <motion.section className="w-full relative py-20 bg-linear-to-b from-[#732824] to-[#4a1a18]" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.9 }}>
+    <motion.section className="w-full relative py-20 bg-linear-to-b from-[#732824] to-[#4a1a18]" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.9 }}>
       <div className="absolute inset-0 opacity-5">
         <DecorativePattern />
       </div>

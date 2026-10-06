@@ -1,78 +1,33 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
 import { MotionSection, MotionItem, MotionCard } from "../components/MotionSection";
 import { BedIllustration, DecorativePattern } from "../components/Illustrations";
-import { FaBed, FaWifi, FaTv, FaSnowflake, FaCoffee, FaShower, FaCouch, FaConciergeBell, FaCheckCircle, FaUsers, FaDoorOpen, FaExclamationTriangle } from "react-icons/fa";
-
-const categories = ["All", "Economy", "Deluxe", "Premium"];
+import { FaBed, FaWifi, FaTv, FaSnowflake, FaCoffee, FaShower, FaCouch, FaConciergeBell, FaCheckCircle, FaUsers, FaDoorOpen, FaExclamationTriangle, FaWhatsapp } from "react-icons/fa";
 
 const roomsData = [
-  // Economy Category
   {
-    category: "Economy",
+    category: "Standard",
     name: "Standard AC Room",
     image: "/img1.jpg",
-    price: "₹1,400",
+    price: "₹1,700",
     size: "200 sq ft",
     occupancy: "2 Adults",
     features: ["Single Bed", "Free WiFi", "LED TV", "AC", "Attached Bathroom"],
     badge: null
   },
   {
-    category: "Economy",
+    category: "Standard",
     name: "Standard Non-AC Room",
     image: "/img3.jpg",
     price: "₹1,300",
     size: "250 sq ft",
     occupancy: "2 Adults",
     features: ["Double Bed", "Free WiFi", "LED TV", "Non-AC", "Room Service"],
-    badge: "Budget Friendly"
-  },
-  // Deluxe Category
-  {
-    category: "Deluxe",
-    name: "Deluxe AC Room",
-    image: "/img5.jpg",
-    price: "₹1,500",
-    size: "300 sq ft",
-    occupancy: "2 Adults",
-    features: ["King Size Bed", "Free WiFi", "LED TV", "AC", "Room Service", "Complimentary Breakfast"],
     badge: null
-  },
-  {
-    category: "Deluxe",
-    name: "Deluxe Non-Room",
-    image: "/img6.jpg",
-    price: "₹1,300",
-    size: "320 sq ft",
-    occupancy: "2-3 Adults",
-    features: ["2 Single Beds", "Premium WiFi", "Smart TV", "Non-AC", "Breakfast", "Work Desk"],
-    badge: null
-  },
-  // Premium Category
-  {
-    category: "Premium",
-    name: "Executive Suite",
-    image: "/img7.jpg",
-    price: "₹1,400",
-    size: "450 sq ft",
-    occupancy: "2 Adults",
-    features: ["King Bed + Sofa", "Premium WiFi", "Smart TV", "AC", "Mini Bar", "Breakfast & Dinner", "Work Desk"],
-    badge: "Most Popular"
-  },
-  {
-    category: "Premium",
-    name: "Premium Suite",
-    image: "/img11.jpg",
-    price: "₹1,500",
-    size: "500 sq ft",
-    occupancy: "3 Adults",
-    features: ["King Bed + Couch", "High-Speed WiFi", "4K TV", "Central AC", "Minibar", "All Meals", "Study Area", "Balcony"],
-    badge: null
-  } 
+  }
 ];
 
 const amenities = [
@@ -93,11 +48,7 @@ const reviews = [
 ];
 
 export default function Rooms() {
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filteredRooms = activeCategory === "All" 
-    ? roomsData 
-    : roomsData.filter(room => room.category === activeCategory);
+  const filteredRooms = roomsData;
 
   return (
     <div className="min-h-screen bg-[#FEFAE0]">
@@ -120,7 +71,7 @@ export default function Rooms() {
 
         <motion.div
           className="relative z-10 text-center px-4 max-w-4xl"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -161,40 +112,20 @@ export default function Rooms() {
         </motion.div>
       </section>
 
-      {/* Category Filter Section */}
+      {/* Rooms Section */}
       <motion.section 
         className="w-full max-w-7xl mx-auto py-12 px-4"
-        initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
+        initial={{ opacity: 0, scale: 0.988, rotateY: 15 }}
         whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
       >
         <MotionSection direction="scale">
-          <div className="text-center mb-8">
-            <span className="text-[#bfa76a] text-sm tracking-[0.3em] uppercase font-bold">Browse by Category</span>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#732824] mt-2 mb-6">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#732824] mt-2 mb-4">
               Find Your <span className="italic text-[#bfa76a]">Perfect Room</span>
             </h2>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {categories.map((category, i) => (
-              <motion.button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-8 py-3 rounded-full font-semibold tracking-wider uppercase transition-all ${
-                  activeCategory === category
-                    ? "bg-[#732824] text-white shadow-lg"
-                    : "bg-white border-2 border-[#bfa76a]/30 text-[#732824] hover:border-[#bfa76a]"
-                }`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {category}
-              </motion.button>
-            ))}
+            <div className="w-16 h-1 bg-[#bfa76a] mx-auto rounded-full"></div>
           </div>
         </MotionSection>
 
@@ -207,17 +138,18 @@ export default function Rooms() {
             <MotionCard key={`${room.category}-${room.name}`} delay={i * 0.1}>
               <motion.div
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
                 className="bg-white rounded-2xl shadow-xl overflow-hidden h-full border-2 border-transparent hover:border-[#bfa76a] transition-all"
-                whileHover={{ y: -8 }}
               >
-                {room.badge && (
-                  <div className="bg-[#bfa76a] text-[#732824] font-bold text-sm px-4 py-2 absolute top-4 right-4 z-10 rounded-full shadow-lg">
-                    {room.badge}
-                  </div>
-                )}
+                <a
+                  href={`https://wa.me/918984909990?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20booking%20the%20${encodeURIComponent(room.name)}%20at%20Hotel%20Goldy%20Premium.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-sm border border-[#bfa76a]/60 text-[#bfa76a] hover:bg-[#bfa76a] hover:text-white transition-all duration-300 shadow-lg hover:scale-110 active:scale-95"
+                  aria-label="Book on WhatsApp"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <FaWhatsapp className="w-5 h-5" />
+                </a>
                 
                 <div className="relative h-56 overflow-hidden">
                   <Image
@@ -234,9 +166,12 @@ export default function Rooms() {
                 <div className="p-6">
                   <h3 className="font-serif text-xl font-bold text-[#732824] mb-3">{room.name}</h3>
                   
-                  <div className="flex items-baseline gap-2 mb-4">
+                  <div className="flex items-baseline gap-2 mb-1">
                     <span className="text-3xl font-bold text-[#732824]">{room.price}</span>
                     <span className="text-[#7c6f57]">/ night</span>
+                  </div>
+                  <div className="mb-4 text-sm font-semibold text-[#bfa76a]">
+                    ✨ 15% OFF for online bookings
                   </div>
 
                   <div className="mt-4 mb-4">
@@ -285,7 +220,7 @@ export default function Rooms() {
           <div className="text-center mt-12">
             <p className="text-[#7c6f57] font-serif text-lg">
               Showing {filteredRooms.length} {filteredRooms.length === 1 ? "room" : "rooms"}
-              {activeCategory !== "All" && ` in ${activeCategory} category`}
+
             </p>
           </div>
         </MotionItem>
@@ -295,9 +230,9 @@ export default function Rooms() {
       {/* Amenities Section */}
       <motion.section 
         className="w-full relative py-20 bg-linear-to-b from-[#732824] to-[#4a1a18]"
-        initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
+        initial={{ opacity: 0, scale: 0.988, rotateY: 15 }}
         whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
       >
         <div className="absolute inset-0 opacity-5">
@@ -325,7 +260,7 @@ export default function Rooms() {
                 <div className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl border-2 border-[#bfa76a]/30 hover:border-[#bfa76a] transition-all">
                   <motion.div
                     className="w-12 h-12 bg-[#bfa76a] rounded-full flex items-center justify-center mb-4"
-                    whileHover={{ rotate: 360 }}
+                    whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
                     <amenity.icon className="text-[#732824] text-xl" />
@@ -342,9 +277,9 @@ export default function Rooms() {
       {/* Reviews Section */}
       <motion.section 
         className="w-full bg-[#FEFAE0] py-20"
-        initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
+        initial={{ opacity: 0, scale: 0.988, rotateY: 15 }}
         whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
       >
         <div className="w-full max-w-7xl mx-auto px-4">
@@ -394,9 +329,9 @@ export default function Rooms() {
       {/* CTA Section */}
       <motion.section 
         className="w-full bg-linear-to-r from-[#732824] to-[#732824] py-16"
-        initial={{ opacity: 0, scale: 0.8, rotateY: 15 }}
+        initial={{ opacity: 0, scale: 0.988, rotateY: 15 }}
         whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
       >
         <div className="w-full max-w-4xl mx-auto px-4 text-center">
@@ -413,10 +348,21 @@ export default function Rooms() {
           <MotionItem delay={0.4}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="tel:+918093261999"
+                href="https://wa.me/918984909990?text=Hello%2C%20I%20would%20like%20to%20book%20a%20room%20at%20Hotel%20Goldy%20Premium."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#bfa76a] border-2 border-[#bfa76a] text-[#1a0a09] font-bold rounded-full px-10 py-4 text-lg shadow-xl tracking-wider uppercase flex items-center justify-center gap-2"
+                whileHover={{ scale: 1.05, backgroundColor: "transparent", color: "#bfa76a" }}
+                whileTap={{ scale: 0.987 }}
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Book via WhatsApp
+              </motion.a>
+              <motion.a
+                href="tel:+918984909990"
                 className="bg-transparent border-2 border-white text-white font-bold rounded-full px-10 py-4 text-lg shadow-xl tracking-wider uppercase"
                 whileHover={{ scale: 1.05, backgroundColor: "white", color: "#732824" }}
-                whileTap={{ scale: 0.97 }}
+                whileTap={{ scale: 0.987 }}
               >
                 Call Us
               </motion.a>

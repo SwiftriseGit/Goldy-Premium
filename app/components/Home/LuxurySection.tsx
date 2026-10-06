@@ -9,9 +9,9 @@ export default function LuxurySection() {
   return (
     <motion.section
       className="w-full max-w-7xl mx-auto mb-20 mt-10 px-4 relative"
-      initial={{ opacity: 0, y: 100, scale: 0.9, rotateX: 10 }}
+      initial={{ opacity: 0, y: 20, scale: 0.98, rotateX: 10 }}
       whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       <div className="absolute inset-0 opacity-40 pointer-events-none overflow-hidden">
@@ -58,10 +58,10 @@ export default function LuxurySection() {
               <motion.div
                 key={i}
                 className="flex flex-col items-center border-r last:border-r-0 border-[#bfa76a]/30 pr-8 last:pr-0"
-                initial={{ opacity: 0, scale: 0.5 }}
+                initial={{ opacity: 0, scale: 0.985 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.15, type: "spring", bounce: 0.4 }}
+                transition={{ duration: 0.5, delay: i * 0.15, ease: "easeOut" }}
               >
                 <CountUp value={stat.value} className="text-3xl font-black text-[#732824] font-serif" />
                 <span className="text-xs text-[#bfa76a] tracking-widest uppercase mt-1">{stat.label}</span>
@@ -72,7 +72,7 @@ export default function LuxurySection() {
             href="/about"
             className="self-start inline-flex items-center gap-2 bg-[#732824] text-white font-bold rounded-full px-8 py-3 shadow-lg tracking-wider uppercase text-sm"
             whileHover={{ scale: 1.05, backgroundColor: "#bfa76a" }}
-            whileTap={{ scale: 0.96 }}
+            whileTap={{ scale: 0.986 }}
             transition={{ duration: 0.2 }}
           >
             Discover More
@@ -85,12 +85,10 @@ export default function LuxurySection() {
             <motion.div
               className="absolute inset-0 rounded-3xl pointer-events-none"
               style={{
-                border: "4px solid transparent",
-                background: "linear-gradient(120deg, #bfa76a, #ffe9b0, #bfa76a) border-box",
-                boxShadow: "0 0 22px 8px #bfa76a, 0 0 64px 16px #ffe9b0"
+                border: "1px solid rgba(191, 167, 106, 0.4)",
               }}
               animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{ duration: 1.8, repeat: Infinity }}
+              transition={{ duration: 1.8}}
             />
             <div className="absolute inset-0 opacity-5" style={{backgroundImage: 'radial-gradient(circle, #bfa76a 1px, transparent 1px)', backgroundSize: '24px 24px'}} />
             <div className="absolute top-0 left-0 w-12 h-12 border-t-4 border-l-4 border-[#bfa76a] rounded-tl-3xl" />
@@ -99,9 +97,7 @@ export default function LuxurySection() {
             <div className="absolute bottom-0 right-0 w-12 h-12 border-b-4 border-r-4 border-[#bfa76a] rounded-br-3xl" />
             <div className="relative z-10 flex flex-col items-center w-full">
               <motion.div
-                className="w-16 h-16 rounded-full bg-[#bfa76a]/20 border-2 border-[#bfa76a] flex items-center justify-center mb-5 shadow-lg"
-                animate={{ rotate: [0, 360] }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="w-16 h-16 rounded-full bg-[#bfa76a]/20 border border-[#bfa76a]/50 flex items-center justify-center mb-5"
               >
                 <FaHotel size={28} color="#bfa76a" />
               </motion.div>
@@ -111,13 +107,13 @@ export default function LuxurySection() {
               <p className="text-white/70 text-sm text-center mb-6 leading-relaxed">Reserve your stay and experience world-class hospitality crafted just for you.</p>
               <div className="flex items-center gap-2 bg-white/10 rounded-full px-5 py-2 mb-6 border border-[#bfa76a]/40">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M3 8h18M14 3l7 7-7 7" stroke="#bfa76a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                <span className="text-white font-bold tracking-wider text-sm">+91-8093261999</span>
+                <span className="text-white font-bold tracking-wider text-sm">+91-8984909990</span>
               </div>
               <motion.a
                 href="/contact"
                 className="w-full text-center bg-[#bfa76a] text-[#732824] font-black rounded-full px-8 py-3 shadow-lg tracking-widest uppercase text-sm"
                 whileHover={{ scale: 1.04, backgroundColor: "#ffffff" }}
-                whileTap={{ scale: 0.97 }}
+                whileTap={{ scale: 0.987 }}
                 transition={{ duration: 0.2 }}
               >
                 Make a Reservation

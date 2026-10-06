@@ -8,7 +8,7 @@ import { ServiceBellIllustration, LuxuryKeyIllustration } from "../Illustrations
 
 export default function ContactInfoAndForm() {
   return (
-    <motion.section className="w-full max-w-7xl mx-auto py-20 px-4 relative" initial={{ opacity: 0, y: -80 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.7, type: "spring", bounce: 0.4 }}>
+    <motion.section className="w-full max-w-7xl mx-auto py-20 px-4 relative" initial={{ opacity: 0, y: -15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.7, ease: "easeOut" }}>
       {/* Background Illustrations */}
       <div className="absolute top-0 left-0 opacity-10 pointer-events-none">
         <ServiceBellIllustration className="w-40 h-40" />
@@ -58,7 +58,7 @@ export default function ContactInfoAndForm() {
             >
               <motion.div
                 className="w-14 h-14 bg-[#732824] rounded-2xl flex items-center justify-center text-[#bfa76a] text-2xl mb-5 mx-auto group-hover:bg-[#bfa76a] group-hover:text-[#732824] transition-colors"
-                whileHover={{ rotate: 360, scale: 1.1 }}
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.5 }}
               >
                 {item.icon}
@@ -122,9 +122,8 @@ export default function ContactInfoAndForm() {
                 <h4 className="font-semibold text-[#bfa76a] mb-4">Connect With Us</h4>
                 <div className="flex gap-3">
                   {[
-                    { icon: <FaFacebookF />, link: "https://facebook.com" },
-                    { icon: <FaInstagram />, link: "https://instagram.com" },
-                    { icon: <FaWhatsapp />, link: "https://wa.me/918093261999" }
+                    { icon: <FaFacebookF />, link: "https://www.facebook.com/share/1FCdJZFLkk/" },
+                    { icon: <FaWhatsapp />, link: "https://wa.me/918984909990" }
                   ].map((social, i) => (
                     <motion.a
                       key={i}
@@ -132,7 +131,7 @@ export default function ContactInfoAndForm() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#bfa76a] transition-colors"
-                      whileHover={{ scale: 1.1, rotate: 360 }}
+                      whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.3 }}
                     >
                       {social.icon}

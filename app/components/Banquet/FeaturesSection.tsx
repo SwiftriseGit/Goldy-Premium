@@ -17,7 +17,7 @@ const banquetFeatures = [
 
 export default function FeaturesSection() {
   return (
-    <motion.section className="w-full max-w-7xl mx-auto py-20 px-4" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.9 }}>
+    <motion.section className="w-full max-w-7xl mx-auto py-20 px-4" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.9 }}>
       <MotionSection direction="up">
         <div className="text-center mb-16">
           <span className="text-[#bfa76a] text-sm tracking-[0.3em] uppercase font-bold">Premium Facilities</span>
@@ -38,7 +38,7 @@ export default function FeaturesSection() {
             <div className="bg-white p-6 rounded-2xl shadow-lg h-full border-2 border-[#bfa76a]/20 hover:border-[#bfa76a] transition-all">
               <motion.div
                 className="w-14 h-14 bg-linear-to-b from-[#732824] to-[#732824] rounded-full flex items-center justify-center mb-4"
-                whileHover={{ rotate: 360 }}
+                whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.6 }}
               >
                 <feature.icon className="text-[#bfa76a] text-2xl" />

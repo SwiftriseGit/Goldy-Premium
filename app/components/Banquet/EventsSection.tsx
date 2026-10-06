@@ -14,7 +14,7 @@ const events = [
 
 export default function EventsSection() {
   return (
-    <motion.section className="w-full max-w-7xl mx-auto py-20 px-4" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.9 }}>
+    <motion.section className="w-full max-w-7xl mx-auto py-20 px-4" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.9 }}>
       <MotionSection direction="up">
         <div className="text-center mb-16">
           <span className="text-[#bfa76a] text-sm tracking-[0.3em] uppercase font-bold">Versatile Spaces</span>

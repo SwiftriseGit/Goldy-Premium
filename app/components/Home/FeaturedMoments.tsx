@@ -9,9 +9,9 @@ export default function FeaturedMoments() {
   return (
     <motion.section
       className="w-full mb-20 max-w-6xl mx-auto px-4 relative"
-      initial={{ opacity: 0, y: 100, scale: 0.9, rotateX: 10 }}
+      initial={{ opacity: 0, y: 20, scale: 0.98, rotateX: 10 }}
       whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       <div className="flex flex-col items-center mb-12">
@@ -44,7 +44,7 @@ export default function FeaturedMoments() {
           <motion.div
             key={i}
             className="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer"
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.65, delay: i * 0.12, ease: [0.25, 0.46, 0.45, 0.94] }}

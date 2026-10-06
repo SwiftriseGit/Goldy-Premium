@@ -86,7 +86,7 @@ export function MotionCard({
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 40, scale: 0.95 }}
+      initial={{ opacity: 0, y: 40, scale: 0.985 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.65, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -136,9 +136,9 @@ export function CountUp({
     <motion.span
       ref={ref}
       className={className}
-      initial={{ opacity: 0, scale: 0.5 }}
+      initial={{ opacity: 0, scale: 0.985 }}
       animate={isInView ? { opacity: 1, scale: 1 } : {}}
-      transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {value}
     </motion.span>

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { FaConciergeBell, FaWifi, FaParking, FaUtensils, FaSpa, FaCocktail, FaSwimmingPool, FaDumbbell, FaShieldAlt, FaBed, FaCar, FaGlassCheers } from "react-icons/fa";
@@ -9,7 +9,7 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-[#FEFAE0]">
       {/* Hero Section */}
-      <motion.section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden bg-linear-to-b from-[#732824] to-[#4a1a18]" initial={{ opacity: 0, rotateX: 90 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
+      <motion.section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden bg-linear-to-b from-[#732824] to-[#4a1a18]" initial={{ opacity: 0, rotateX: 10 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
         {/* Decorative Pattern */}
         <div className="absolute inset-0 opacity-5" style={{backgroundImage: "radial-gradient(circle, #bfa76a 1px, transparent 1px)", backgroundSize: "30px 30px"}} />
         
@@ -23,7 +23,7 @@ export default function Services() {
 
         <motion.div
           className="relative z-10 text-center px-4 max-w-4xl"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -65,7 +65,7 @@ export default function Services() {
       </motion.section>
 
       {/* Main Services Grid */}
-      <motion.section className="w-full max-w-7xl mx-auto py-20 px-4" initial={{ opacity: 0, rotateX: 90 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
+      <motion.section className="w-full max-w-7xl mx-auto py-20 px-4" initial={{ opacity: 0, rotateX: 10 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
         <div className="text-center mb-16">
           <MotionItem delay={0}>
             <span className="uppercase tracking-[0.3em] text-[#bfa76a] text-xs font-bold mb-3 block">Everything You Need</span>
@@ -157,7 +157,7 @@ export default function Services() {
                 
                 <motion.div
                   className="w-16 h-16 bg-[#732824] rounded-2xl flex items-center justify-center text-[#bfa76a] text-3xl mb-6 group-hover:bg-[#bfa76a] group-hover:text-[#732824] transition-all"
-                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.5 }}
                 >
                   {service.icon}
@@ -172,7 +172,7 @@ export default function Services() {
       </motion.section>
 
       {/* Premium Packages */}
-      <motion.section className="w-full bg-linear-to-b from-white to-[#FEFAE0] py-20" initial={{ opacity: 0, rotateX: 90 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
+      <motion.section className="w-full bg-linear-to-b from-white to-[#FEFAE0] py-20" initial={{ opacity: 0, rotateX: 10 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
         <div className="w-full  max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <MotionItem delay={0}>
@@ -235,7 +235,7 @@ export default function Services() {
                       href="/contact"
                       className={`block text-center py-3 px-6 rounded-full font-bold tracking-wider uppercase ${pkg.featured ? "bg-[#bfa76a] text-[#732824]" : "bg-[#732824] text-white"}`}
                       whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.97 }}
+                      whileTap={{ scale: 0.987 }}
                     >
                       Book Now
                     </motion.a>
@@ -248,7 +248,7 @@ export default function Services() {
       </motion.section>
 
       {/* Additional Features */}
-      <motion.section className="w-full max-w-7xl mx-auto py-20 px-4" initial={{ opacity: 0, rotateX: 90 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
+      <motion.section className="w-full max-w-7xl mx-auto py-20 px-4" initial={{ opacity: 0, rotateX: 10 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
         <div className="text-center mb-16">
           <MotionItem delay={0}>
             <span className="uppercase tracking-[0.3em] text-[#bfa76a] text-xs font-bold mb-3 block">Extra Comfort</span>
@@ -282,7 +282,7 @@ export default function Services() {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section className="w-full bg-linear-to-r from-[#732824] to-[#732824] py-16" initial={{ opacity: 0, rotateX: 90 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
+      <motion.section className="w-full bg-linear-to-r from-[#732824] to-[#732824] py-16" initial={{ opacity: 0, rotateX: 10 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
         <div className="w-full max-w-4xl mx-auto px-4 text-center">
           <MotionItem delay={0}>
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-white mb-6">
@@ -300,7 +300,7 @@ export default function Services() {
                 href="/rooms"
                 className="bg-[#bfa76a] text-[#732824] font-bold rounded-full px-10 py-4 text-lg shadow-xl tracking-wider uppercase"
                 whileHover={{ scale: 1.05, backgroundColor: "#ffffff" }}
-                whileTap={{ scale: 0.97 }}
+                whileTap={{ scale: 0.987 }}
               >
                 View Rooms
               </motion.a>
@@ -308,7 +308,7 @@ export default function Services() {
                 href="/contact"
                 className="bg-transparent border-2 border-white text-white font-bold rounded-full px-10 py-4 text-lg shadow-xl tracking-wider uppercase"
                 whileHover={{ scale: 1.05, backgroundColor: "white", color: "#732824" }}
-                whileTap={{ scale: 0.97 }}
+                whileTap={{ scale: 0.987 }}
               >
                 Contact Us
               </motion.a>

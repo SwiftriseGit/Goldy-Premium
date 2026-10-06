@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import HeroSection from "../components/Gallery/HeroSection";
@@ -7,7 +7,7 @@ import GalleryGrid from "../components/Gallery/GalleryGrid";
 import ResultsCount from "../components/Gallery/ResultsCount";
 import CTASection from "../components/Gallery/CTASection";
 
-const categories = ["All", "Rooms", "Hotel", "Bathrooms" ];
+const categories = ["All", "Rooms", "Hotel"];
 
 const images = {
   Rooms: [
@@ -16,17 +16,17 @@ const images = {
     "/img7.jpg",
     "/img11.jpg",
     "/img6.jpg",
-    "/img5.jpg"
+    "/img5.jpg",
+    "/WhatsApp Image 2026-10-06 at 9.58.07 AM (1).jpeg",
+    "/WhatsApp Image 2026-10-06 at 9.58.07 AM.jpeg",
   ],
   Hotel: [
-    "/img14.jpg",
-    "/img9.jpg",
     "/img12.jpg",
-    "/img4.jpg"
-  ],
-  Bathrooms: [
-    "/img8.jpg" 
-  ]  
+    "/img4.jpg",
+    "/WhatsApp Image 2026-10-06 at 9.58.08 AM.jpeg",
+    "/WhatsApp Image 2026-10-06 at 9.58.08 AM (1).jpeg",
+    "/WhatsApp Image 2026-10-06 at 9.58.08 AM (2).jpeg",
+  ]
 };
 
 export default function Gallery() {

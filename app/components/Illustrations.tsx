@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 
@@ -25,7 +25,7 @@ export function HotelBuildingIllustration({ className = "" }: { className?: stri
                 opacity="0.7"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: [0.4, 0.8, 0.4] }}
-                transition={{ duration: 3, delay: (row + col) * 0.2, repeat: Infinity }}
+                transition={{ duration: 3, delay: (row + col) * 0.2 }}
               />
             ))}
           </g>
@@ -67,7 +67,7 @@ export function LuxuryKeyIllustration({ className = "" }: { className?: string }
       <motion.g
         initial={{ rotate: -45, opacity: 0 }}
         animate={{ rotate: 0, opacity: 1 }}
-        transition={{ duration: 0.8, type: "spring" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <circle cx="60" cy="100" r="25" stroke="#bfa76a" strokeWidth="6" fill="none"/>
         <circle cx="60" cy="100" r="12" fill="#732824"/>
@@ -82,9 +82,9 @@ export function LuxuryKeyIllustration({ className = "" }: { className?: string }
           strokeWidth="1"
           fill="none"
           opacity="0.3"
-          initial={{ scale: 0.8 }}
+          initial={{ scale: 0.988 }}
           animate={{ scale: 1.2 }}
-          transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
+          transition={{ duration: 2, repeatType: "reverse" }}
         />
       </motion.g>
     </svg>
@@ -131,7 +131,7 @@ export function ServiceBellIllustration({ className = "" }: { className?: string
             strokeWidth="1.5"
             opacity="0"
             animate={{ opacity: [0, 0.6, 0], y: [-5, -15, -25] }}
-            transition={{ duration: 1.5, delay: i * 0.3, repeat: Infinity, repeatDelay: 2 }}
+            transition={{ duration: 1.5, delay: i * 0.3, repeatDelay: 2 }}
           />
         ))}
       </motion.g>
@@ -144,7 +144,7 @@ export function ChampagneIllustration({ className = "" }: { className?: string }
   return (
     <svg viewBox="0 0 200 200" fill="none" className={className} xmlns="http://www.w3.org/2000/svg">
       <motion.g
-        initial={{ scale: 0.8, opacity: 0 }}
+        initial={{ scale: 0.988, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
@@ -171,7 +171,7 @@ export function ChampagneIllustration({ className = "" }: { className?: string }
             fill="white"
             opacity="0.8"
             animate={{ y: [-50, -80], opacity: [0.8, 0] }}
-            transition={{ duration: 2, delay: i * 0.4, repeat: Infinity }}
+            transition={{ duration: 2, delay: i * 0.4 }}
           />
         ))}
         
@@ -183,7 +183,7 @@ export function ChampagneIllustration({ className = "" }: { className?: string }
           fill="white"
           initial={{ scale: 0 }}
           animate={{ scale: [0, 1.5, 0] }}
-          transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+          transition={{ duration: 2, repeatDelay: 1 }}
         />
       </motion.g>
     </svg>
@@ -218,7 +218,7 @@ export function AbstractShapes({ className = "" }: { className?: string }) {
         opacity="0.2"
         initial={{ scale: 0, rotate: 0 }}
         animate={{ scale: 1, rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 20, ease: "linear" }}
       />
       <motion.rect
         x="300"
@@ -230,7 +230,7 @@ export function AbstractShapes({ className = "" }: { className?: string }) {
         opacity="0.15"
         initial={{ rotate: 0 }}
         animate={{ rotate: 360 }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 30, ease: "linear" }}
       />
       <motion.path
         d="M 50 400 Q 150 350 250 400 Q 350 450 450 400"
@@ -239,7 +239,7 @@ export function AbstractShapes({ className = "" }: { className?: string }) {
         opacity="0.2"
         initial={{ pathLength: 0 }}
         animate={{ pathLength: 1 }}
-        transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+        transition={{ duration: 3, repeatType: "reverse" }}
       />
     </svg>
   );
@@ -252,7 +252,7 @@ export function CrownIllustration({ className = "" }: { className?: string }) {
       <motion.g
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         {/* Crown Base */}
         <path
@@ -269,7 +269,7 @@ export function CrownIllustration({ className = "" }: { className?: string }) {
           r="6"
           fill="#732824"
           animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          transition={{ duration: 2 }}
         />
         <circle cx="70" cy="100" r="4" fill="#732824"/>
         <circle cx="130" cy="100" r="4" fill="#732824"/>
@@ -287,7 +287,7 @@ export function CrownIllustration({ className = "" }: { className?: string }) {
             fill="white"
             opacity="0"
             animate={{ opacity: [0, 0.8, 0], scale: [0.5, 1.5, 0.5] }}
-            transition={{ duration: 2, delay: i * 0.5, repeat: Infinity }}
+            transition={{ duration: 2, delay: i * 0.5 }}
           />
         ))}
       </motion.g>
@@ -337,7 +337,7 @@ export function StarRatingIllustration({ className = "" }: { className?: string 
           key={i}
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
-          transition={{ duration: 0.5, delay: i * 0.1, type: "spring", bounce: 0.6 }}
+          transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
         >
           <path
             d={`M ${30 + i * 55} 50 L ${35 + i * 55} 60 L ${25 + i * 55} 60 Z M ${30 + i * 55} 60 L ${22 + i * 55} 67 L ${27 + i * 55} 58 Z M ${30 + i * 55} 60 L ${38 + i * 55} 67 L ${33 + i * 55} 58 Z M ${22 + i * 55} 67 L ${30 + i * 55} 75 L ${27 + i * 55} 68 Z M ${38 + i * 55} 67 L ${30 + i * 55} 75 L ${33 + i * 55} 68 Z`}
@@ -351,7 +351,7 @@ export function StarRatingIllustration({ className = "" }: { className?: string 
             strokeWidth="0.5"
             opacity="0.3"
             animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0, 0.3] }}
-            transition={{ duration: 2, delay: i * 0.2, repeat: Infinity }}
+            transition={{ duration: 2, delay: i * 0.2 }}
           />
         </motion.g>
       ))}

@@ -9,7 +9,7 @@ export default function FilterButtons({ categories, activeCategory, setActiveCat
   setActiveCategory: (c: string) => void;
 }) {
   return (
-    <motion.section className="w-full max-w-7xl mx-auto py-12 px-4" initial={{ opacity: 0, scale: 0.5 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
+    <motion.section className="w-full max-w-7xl mx-auto py-12 px-4" initial={{ opacity: 0, scale: 0.985 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
       <MotionSection direction="scale">
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map((category, i) => (
@@ -25,7 +25,7 @@ export default function FilterButtons({ categories, activeCategory, setActiveCat
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.985 }}
             >
               {category}
             </motion.button>

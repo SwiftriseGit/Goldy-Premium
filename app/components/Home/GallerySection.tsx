@@ -8,9 +8,9 @@ export default function GallerySection() {
   return (
     <motion.section
       className="w-full mb-20 bg-[#732824] py-16 px-4"
-      initial={{ opacity: 0, y: 100, scale: 0.9, rotateX: 10 }}
+      initial={{ opacity: 0, y: 20, scale: 0.98, rotateX: 10 }}
       whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       <div className="max-w-6xl mx-auto">
@@ -47,7 +47,7 @@ export default function GallerySection() {
             href="/gallery"
             className="inline-flex items-center gap-2 border-2 border-[#bfa76a] text-[#bfa76a] font-bold rounded-full px-8 py-3 tracking-widest uppercase text-sm"
             whileHover={{ backgroundColor: "#bfa76a", color: "#732824", scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ scale: 0.987 }}
             transition={{ duration: 0.2 }}
           >
             View Full Gallery

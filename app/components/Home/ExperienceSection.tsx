@@ -9,9 +9,9 @@ export default function ExperienceSection() {
   return (
     <motion.section
       className="w-full max-w-6xl mx-auto mb-20 px-4 relative"
-      initial={{ opacity: 0, y: 100, scale: 0.9, rotateX: 10 }}
+      initial={{ opacity: 0, y: 20, scale: 0.98, rotateX: 10 }}
       whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-30">
@@ -34,7 +34,7 @@ export default function ExperienceSection() {
               <motion.span
                 key={i}
                 className="inline-flex items-center gap-1.5 bg-white/10 border border-[#bfa76a]/40 text-white/80 text-xs px-4 py-2 rounded-full tracking-wide"
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.988 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 * i, duration: 0.4 }}
@@ -48,7 +48,7 @@ export default function ExperienceSection() {
             href="/rooms"
             className="inline-flex items-center gap-2 bg-[#bfa76a] text-[#732824] font-black rounded-full px-8 py-3 shadow-lg tracking-widest uppercase text-sm"
             whileHover={{ scale: 1.05, backgroundColor: "#ffffff" }}
-            whileTap={{ scale: 0.97 }}
+            whileTap={{ scale: 0.987 }}
             transition={{ duration: 0.2 }}
           >
             Explore Rooms
@@ -60,7 +60,7 @@ export default function ExperienceSection() {
             <motion.div
               className="absolute -inset-3 rounded-3xl bg-[#bfa76a]/20 blur-xl"
               animate={{ opacity: [0.3, 0.7, 0.3] }}
-              transition={{ duration: 3, repeat: Infinity }}
+              transition={{ duration: 3}}
             />
             <Image
               src="https://gos3.ibcdn.com/153616f2-9ad6-443a-a28a-a060d5130696.jpg"

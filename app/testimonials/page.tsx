@@ -67,14 +67,14 @@ export default function Testimonials() {
   return (
     <div className="min-h-screen bg-[#FEFAE0]">
       {/* Hero Section */}
-      <motion.section className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden bg-linear-to-b from-[#732824] to-[#4a1a18]" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
+      <motion.section className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden bg-linear-to-b from-[#732824] to-[#4a1a18]" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
         <div className="absolute inset-0 opacity-5">
           <DecorativePattern />
         </div>
 
         <motion.div
           className="relative z-10 text-center px-4 max-w-4xl"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
@@ -108,7 +108,7 @@ export default function Testimonials() {
       </motion.section>
 
       {/* Stats Section */}
-      <motion.section className="w-full max-w-7xl mx-auto py-16 px-4 -mt-16" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
+      <motion.section className="w-full max-w-7xl mx-auto py-16 px-4 -mt-16" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat, i) => (
             <MotionCard key={i} delay={i * 0.1}>
@@ -122,7 +122,7 @@ export default function Testimonials() {
       </motion.section>
 
       {/* Testimonials Grid */}
-      <motion.section className="w-full max-w-7xl mx-auto py-20 px-4" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
+      <motion.section className="w-full max-w-7xl mx-auto py-20 px-4" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
         <MotionSection direction="up">
           <div className="text-center mb-16">
             <span className="text-[#bfa76a] text-sm tracking-[0.3em] uppercase font-bold">Authentic Reviews</span>
@@ -185,7 +185,7 @@ export default function Testimonials() {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section className="w-full bg-linear-to-r from-[#732824] to-[#732824] py-16" initial={{ opacity: 0, x: 100 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
+      <motion.section className="w-full bg-linear-to-r from-[#732824] to-[#732824] py-16" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
         <div className="w-full max-w-4xl mx-auto px-4 text-center">
           <MotionItem delay={0}>
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-6">
@@ -203,7 +203,7 @@ export default function Testimonials() {
                 href="/rooms"
                 className="bg-[#bfa76a] text-[#732824] font-bold rounded-full px-10 py-4 text-lg shadow-xl tracking-wider uppercase"
                 whileHover={{ scale: 1.05, backgroundColor: "#ffffff" }}
-                whileTap={{ scale: 0.97 }}
+                whileTap={{ scale: 0.987 }}
               >
                 Book Your Stay
               </motion.a>
@@ -211,7 +211,7 @@ export default function Testimonials() {
                 href="/contact"
                 className="bg-transparent border-2 border-white text-white font-bold rounded-full px-10 py-4 text-lg shadow-xl tracking-wider uppercase"
                 whileHover={{ scale: 1.05, backgroundColor: "white", color: "#732824" }}
-                whileTap={{ scale: 0.97 }}
+                whileTap={{ scale: 0.987 }}
               >
                 Contact Us
               </motion.a>

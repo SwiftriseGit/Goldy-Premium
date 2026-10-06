@@ -9,9 +9,9 @@ export default function OurStory() {
   return (
     <motion.section 
       className="w-full max-w-7xl mx-auto py-20 px-4 relative"
-      initial={{ opacity: 0, x: -100 }}
+      initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="absolute top-0 right-0 opacity-5 pointer-events-none">
@@ -40,7 +40,7 @@ export default function OurStory() {
             <motion.div
               className="absolute -inset-4 bg-[#bfa76a]/10 rounded-3xl"
               animate={{ rotate: [0, 2, 0, -2, 0] }}
-              transition={{ duration: 10, repeat: Infinity }}
+              transition={{ duration: 10}}
             />
             <Image
               src="https://r1imghtlak.mmtcdn.com/5d95c4fc-4eaf-4c69-bed2-a1a3c5cd5dd2.jpg"
@@ -51,10 +51,10 @@ export default function OurStory() {
             />
             <motion.div
               className="absolute -bottom-6 -right-6 bg-[#732824] text-white p-6 rounded-2xl shadow-xl"
-              initial={{ opacity: 0, scale: 0.5 }}
+              initial={{ opacity: 0, scale: 0.985 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.5, type: "spring", bounce: 0.4 }}
+              transition={{ delay: 0.5, ease: "easeOut" }}
             >
               <div className="text-center">
                 <div className="text-4xl font-black text-[#bfa76a]">10+</div>

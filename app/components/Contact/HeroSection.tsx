@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <motion.section className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden" initial={{ opacity: 0, y: -80 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.7, type: "spring", bounce: 0.4 }}>
+    <motion.section className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden" initial={{ opacity: 0, y: -15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.7, ease: "easeOut" }}>
       <div className="absolute inset-0 z-0">
         <Image
           src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=1174&auto=format&fit=crop"
@@ -19,7 +19,7 @@ export default function HeroSection() {
 
       <motion.div
         className="relative z-10 text-center px-4 max-w-4xl"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
