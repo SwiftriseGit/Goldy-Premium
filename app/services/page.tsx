@@ -9,7 +9,7 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-[#FEFAE0]">
       {/* Hero Section */}
-      <motion.section className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden bg-linear-to-b from-[#732824] to-[#4a1a18]" initial={{ opacity: 0, rotateX: 10 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
+      <motion.section className="relative w-full min-h-[60vh] pt-28 pb-12 flex items-center justify-center overflow-hidden bg-linear-to-b from-[#732824] to-[#4a1a18]" initial={{ opacity: 0, rotateX: 10 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
         {/* Decorative Pattern */}
         <div className="absolute inset-0 opacity-5" style={{backgroundImage: "radial-gradient(circle, #bfa76a 1px, transparent 1px)", backgroundSize: "30px 30px"}} />
         
@@ -171,81 +171,7 @@ export default function Services() {
         </div>
       </motion.section>
 
-      {/* Premium Packages */}
-      <motion.section className="w-full bg-linear-to-b from-white to-[#FEFAE0] py-20" initial={{ opacity: 0, rotateX: 10 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>
-        <div className="w-full  max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <MotionItem delay={0}>
-              <span className="uppercase tracking-[0.3em] text-[#bfa76a] text-xs font-bold mb-3 block">Special Offers</span>
-            </MotionItem>
-            <MotionItem delay={0.1}>
-              <h2 className="font-serif text-4xl md:text-5xl font-extrabold text-[#732824] mb-3">Service Packages</h2>
-            </MotionItem>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Business Traveler",
-                desc: "Perfect for professionals on the go",
-                features: ["Express Check-in/out", "High-speed WiFi", "Business Center Access", "Coffee & Breakfast"],
-                price: "₹3,999/night"
-              },
-              {
-                name: "Leisure Stay",
-                desc: "Ideal for relaxation and comfort",
-                features: ["Spa Treatment", "Pool Access", "Room Service", "Welcome Drink"],
-                price: "₹4,999/night",
-                featured: true
-              },
-              {
-                name: "Celebration Package",
-                desc: "Make your special moments memorable",
-                features: ["Banquet Hall 2hrs", "Decoration Services", "Custom Menu", "Photography Session"],
-                price: "₹9,999/event"
-              }
-            ].map((pkg, i) => (
-              <MotionCard key={i} delay={i * 0.15}>
-                <div className={`relative bg-white border-2 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all h-full flex flex-col ${pkg.featured ? "border-[#bfa76a] scale-105" : "border-[#bfa76a]/20"}`}>
-                  {pkg.featured && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#bfa76a] text-[#732824] px-6 py-1 rounded-full text-sm font-bold uppercase">
-                      Most Popular
-                    </div>
-                  )}
-                  
-                  <div className="flex-1">
-                    <h3 className="font-serif text-2xl font-bold text-[#732824] mb-2">{pkg.name}</h3>
-                    <p className="text-[#7c6f57] text-sm mb-6">{pkg.desc}</p>
-                    
-                    <ul className="space-y-3 mb-8">
-                      {pkg.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-3">
-                          <span className="w-5 h-5 rounded-full bg-[#bfa76a]/20 flex items-center justify-center shrink-0">
-                            <span className="w-2 h-2 rounded-full bg-[#bfa76a]" />
-                          </span>
-                          <span className="text-[#5a4a3a]">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="border-t border-[#bfa76a]/20 pt-6 mt-auto">
-                    <div className="text-3xl font-black text-[#732824] mb-4">{pkg.price}</div>
-                    <motion.a
-                      href="/contact"
-                      className={`block text-center py-3 px-6 rounded-full font-bold tracking-wider uppercase ${pkg.featured ? "bg-[#bfa76a] text-[#732824]" : "bg-[#732824] text-white"}`}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.987 }}
-                    >
-                      Book Now
-                    </motion.a>
-                  </div>
-                </div>
-              </MotionCard>
-            ))}
-          </div>
-        </div>
-      </motion.section>
 
       {/* Additional Features */}
       <motion.section className="w-full max-w-7xl mx-auto py-20 px-4" initial={{ opacity: 0, rotateX: 10 }} whileInView={{ opacity: 1, rotateX: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 1, ease: "easeOut" }}>

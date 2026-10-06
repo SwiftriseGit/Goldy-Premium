@@ -6,11 +6,11 @@ import { CrownIllustration } from "../Illustrations";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full min-h-[70vh] pt-28 pb-12 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.jdmagicbox.com/v2/comp/jeypore/d4/9999p6854.6854.250821142753.d1d4/catalogue/f7vwsj0ezxmeg8e-45nb3wy867.jpg"
-          alt="Hotel exterior"
+          src="/image.png"
+          alt="Hotel Goldy Premium"
           fill
           className="object-cover"
           priority

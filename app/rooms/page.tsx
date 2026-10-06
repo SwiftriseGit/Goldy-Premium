@@ -25,7 +25,7 @@ const roomsData = [
     price: "₹1,700",
     size: "200 sq ft",
     occupancy: "2 Adults",
-    features: ["Single Bed", "Free WiFi", "LED TV", "AC", "Attached Bathroom"],
+    features: ["Double Bed", "Free WiFi", "LED TV", "AC", "Attached Bathroom"],
     badge: "Most Popular"
   }
 ];
@@ -53,7 +53,7 @@ export default function Rooms() {
   return (
     <div className="min-h-screen bg-[#FEFAE0]">
       {/* Hero Section */}
-      <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full min-h-[70vh] pt-28 pb-12 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/img12.jpg"
@@ -138,19 +138,9 @@ export default function Rooms() {
             <MotionCard key={`${room.category}-${room.name}`} delay={i * 0.1}>
               <motion.div
                 layout
-                className="bg-white rounded-2xl shadow-xl overflow-hidden h-full border-2 border-transparent hover:border-[#bfa76a] transition-all"
+                className="bg-white rounded-2xl shadow-xl overflow-hidden h-full border-2 border-transparent hover:border-[#bfa76a] transition-all flex flex-col"
               >
-                <div className="relative h-56 overflow-hidden">
-                  <a
-                    href={`https://wa.me/918984909990?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20booking%20the%20${encodeURIComponent(room.name)}%20at%20Hotel%20Goldy%20Premium.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute top-4 right-4 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-sm border border-[#bfa76a]/60 text-[#bfa76a] hover:bg-[#bfa76a] hover:text-white transition-all duration-300 shadow-md hover:scale-110 active:scale-95"
-                    aria-label="Book on WhatsApp"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <FaWhatsapp className="w-5 h-5" />
-                  </a>
+                <div className="relative h-56 overflow-hidden shrink-0">
                   <Image
                     src={room.image}
                     alt={room.name}
@@ -162,7 +152,7 @@ export default function Rooms() {
                   </div>
                 </div>
 
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <h3 className="font-serif text-xl font-bold text-[#732824] mb-3">{room.name}</h3>
                   
                   <div className="flex items-baseline gap-2 mb-1">
@@ -173,28 +163,6 @@ export default function Rooms() {
                     ✨ 15% OFF for online bookings
                   </div>
 
-                  <div className="mt-4 mb-4">
-                    <div className="flex items-center gap-3 ">
-                      <div className="flex-shrink-0 bg-[#bfa76a] text-white rounded-full w-6 h-6 flex items-center justify-center">
-                        <FaExclamationTriangle className="text-white" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-bold text-[#732824]">Important</p>
-                        <p className="text-xs text-[#7c6f57]">Extra Guest Charges: Non-AC ₹200 , A/C ₹300</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
-                    <div className="flex items-center gap-2 text-[#7c6f57]">
-                      <FaDoorOpen className="text-[#bfa76a]" />
-                      <span>{room.size}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-[#7c6f57]">
-                      <FaUsers className="text-[#bfa76a]" />
-                      <span>{room.occupancy}</span>
-                    </div>
-                  </div>
 
                   <div className="space-y-2 mb-6">
                     {room.features.slice(0, 4).map((feature, fi) => (
@@ -208,6 +176,16 @@ export default function Rooms() {
                     )}
                   </div>
 
+                  <a
+                    href={`https://wa.me/918984909990?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20booking%20the%20${encodeURIComponent(room.name)}%20at%20Hotel%20Goldy%20Premium.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto w-full flex items-center justify-center gap-2 py-3.5 rounded-xl bg-linear-to-r from-[#732824] to-[#4a1a18] text-white font-bold tracking-wider text-[15px] hover:shadow-lg hover:shadow-[#732824]/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FaWhatsapp className="w-5 h-5" />
+                    Book Now
+                  </a>
                 </div>
               </motion.div>
             </MotionCard>

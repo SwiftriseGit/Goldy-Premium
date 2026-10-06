@@ -179,9 +179,17 @@ export default function Footer() {
         <div className="w-full h-px bg-white/20 mb-2"></div>
 
         {/* Bottom Section */}
-        <div className="flex flex-col gap-4">
-          
-          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-white/60 text-[12px] md:text-xs">
+        <div className="flex flex-col md:flex-row md:justify-between items-center gap-4">
+          <div className="text-white/60 text-[12px] md:text-xs text-center md:text-left">
+            <p>
+              &copy; {new Date().getFullYear()} Built by{' '}
+              <a href="https://swiftrise.in" target="_blank" rel="noopener noreferrer" className="text-[#bfa76a] hover:text-white transition-colors underline underline-offset-4 decoration-[#bfa76a] hover:decoration-white font-medium">
+                Swiftrise Solution Pvt Ltd
+              </a>.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center md:justify-end items-center gap-x-4 gap-y-2 text-white/60 text-[12px] md:text-xs">
             <a href="/privacy-policy" className="hover:text-[#bfa76a] transition-colors duration-200">
               Privacy Policy
             </a>
@@ -189,15 +197,6 @@ export default function Footer() {
             <a href="/terms-conditions" className="hover:text-[#bfa76a] transition-colors duration-200">
               Terms & Conditions
             </a>
-          </div>
-
-          <div className="text-white/60 text-[12px] md:text-xs text-center">
-            <p>
-              &copy; {new Date().getFullYear()} Built by{' '}
-              <a href="https://swiftrise.in" target="_blank" rel="noopener noreferrer" className="text-[#bfa76a] hover:text-white transition-colors underline underline-offset-4 decoration-[#bfa76a] hover:decoration-white font-medium">
-                Swiftrise Solution Pvt Ltd
-              </a>.
-            </p>
           </div>
         </div>
       </div>

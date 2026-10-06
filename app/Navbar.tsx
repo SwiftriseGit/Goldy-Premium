@@ -44,9 +44,10 @@ export default function Navbar() {
         {/* Desktop nav center, hidden on mobile */}
         <div className="hidden md:flex gap-8 items-center text-lg font-medium justify-center pr-20 w-full md:ml-0">
           <NavLink href="/" scrolled={scrolled}>Home</NavLink>
+          <NavLink href="/about" scrolled={scrolled}>About Us</NavLink>
+          <NavLink href="/services" scrolled={scrolled}>Services</NavLink>
           <NavLink href="/rooms" scrolled={scrolled}>Rooms</NavLink>
           <NavLink href="/gallery" scrolled={scrolled}>Gallery</NavLink>
-          <NavLink href="/about" scrolled={scrolled}>About</NavLink>
           <NavLink href="/contact" scrolled={scrolled}>Contact</NavLink>
         </div>
         {/* Right side: WhatsApp Book Now + Hamburger */}
@@ -121,11 +122,11 @@ export default function Navbar() {
 
       <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-5">
         <NavLink href="/" scrolled={true} onClick={() => setMobileMenuOpen(false)} isMobile>Home</NavLink>
-        <NavLink href="/rooms" scrolled={true} onClick={() => setMobileMenuOpen(false)} isMobile>Rooms & Suites</NavLink>
-        <NavLink href="/gallery" scrolled={true} onClick={() => setMobileMenuOpen(false)} isMobile>Gallery</NavLink>
         <NavLink href="/about" scrolled={true} onClick={() => setMobileMenuOpen(false)} isMobile>About Us</NavLink>
         <NavLink href="/services" scrolled={true} onClick={() => setMobileMenuOpen(false)} isMobile>Services</NavLink>
-        <NavLink href="/contact" scrolled={true} onClick={() => setMobileMenuOpen(false)} isMobile>Contact Us</NavLink>
+        <NavLink href="/rooms" scrolled={true} onClick={() => setMobileMenuOpen(false)} isMobile>Rooms</NavLink>
+        <NavLink href="/gallery" scrolled={true} onClick={() => setMobileMenuOpen(false)} isMobile>Gallery</NavLink>
+        <NavLink href="/contact" scrolled={true} onClick={() => setMobileMenuOpen(false)} isMobile>Contact</NavLink>
 
         <div className="mt-8 pt-8 border-t border-[#bfa76a]/20">
           <a

@@ -22,7 +22,12 @@ export default function ContactInfoAndForm() {
           {
             icon: <FaPhoneAlt />,
             title: "Phone",
-            value: "+91 89849 09990",
+            value: (
+              <>
+                +91 89849 09990<br />
+                +91 76828 16711
+              </>
+            ),
             link: "tel:+918984909990",
             color: "#bfa76a"
           },
@@ -103,7 +108,10 @@ export default function ContactInfoAndForm() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#bfa76a] mb-1">Call Us</h4>
-                    <p className="text-white/70 text-sm">+91 89849 09990</p>
+                    <p className="text-white/70 text-sm">
+                      +91 89849 09990<br />
+                      +91 76828 16711
+                    </p>
                   </div>
                 </div>
 
@@ -123,6 +131,7 @@ export default function ContactInfoAndForm() {
                 <div className="flex gap-3">
                   {[
                     { icon: <FaFacebookF />, link: "https://www.facebook.com/share/1FCdJZFLkk/" },
+                    { icon: <FaInstagram />, link: "https://www.instagram.com/hotelgoldypremium?stkn=MWI0cmFubDhyaW9maw==" },
                     { icon: <FaWhatsapp />, link: "https://wa.me/918984909990" }
                   ].map((social, i) => (
                     <motion.a

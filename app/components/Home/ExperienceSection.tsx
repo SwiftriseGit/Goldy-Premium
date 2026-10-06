@@ -56,17 +56,21 @@ export default function ExperienceSection() {
           </motion.a>
         </MotionSection>
         <MotionSection direction="left" delay={0.2} className="flex-1 flex justify-center items-center relative z-10">
-          <div className="relative">
+          <motion.div 
+            className="relative group cursor-pointer"
+            whileHover={{ scale: 1.05, y: -10 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
             <motion.div
-              className="absolute -inset-3 rounded-3xl bg-[#bfa76a]/20 blur-xl"
+              className="absolute -inset-3 rounded-3xl bg-[#bfa76a]/20 blur-xl group-hover:bg-[#bfa76a]/40 transition-colors duration-300"
               animate={{ opacity: [0.3, 0.7, 0.3] }}
-              transition={{ duration: 3}}
+              transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             />
             <Image
               src="https://gos3.ibcdn.com/153616f2-9ad6-443a-a28a-a060d5130696.jpg"
               alt="Hotel Comfort"
               width={600} height={400}
-              className="relative rounded-2xl shadow-2xl w-full max-w-md object-cover border-2 border-[#bfa76a]/40"
+              className="relative rounded-2xl shadow-2xl w-full max-w-md object-cover border-2 border-[#bfa76a]/40 group-hover:shadow-[0_30px_60px_-15px_rgba(191,167,106,0.6)] group-hover:border-[#bfa76a] transition-all duration-300"
             />
             <motion.div
               className="absolute -bottom-4 -left-4 bg-[#bfa76a] text-[#732824] rounded-2xl px-5 py-3 shadow-xl font-black text-sm tracking-wider uppercase"
@@ -77,7 +81,7 @@ export default function ExperienceSection() {
             >
               5★ Luxury Hotel
             </motion.div>
-          </div>
+          </motion.div>
         </MotionSection>
       </div>
     </motion.section>

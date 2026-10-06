@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { MotionSection, MotionItem, MotionCard } from "../components/MotionSection";
@@ -67,7 +67,7 @@ export default function Testimonials() {
   return (
     <div className="min-h-screen bg-[#FEFAE0]">
       {/* Hero Section */}
-      <motion.section className="relative w-full h-[50vh] flex items-center justify-center overflow-hidden bg-linear-to-b from-[#732824] to-[#4a1a18]" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
+      <motion.section className="relative w-full min-h-[50vh] pt-28 pb-12 flex items-center justify-center overflow-hidden bg-linear-to-b from-[#732824] to-[#4a1a18]" initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}>
         <div className="absolute inset-0 opacity-5">
           <DecorativePattern />
         </div>

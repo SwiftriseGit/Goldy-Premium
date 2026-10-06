@@ -30,16 +30,6 @@ export default function GalleryGrid({ images }: { images: { src: string; categor
             />
           </div>
 
-          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-end p-6">
-            <motion.div
-              className="w-full h-1 bg-[#bfa76a] mb-3"
-              initial={{ scaleX: 0 }}
-              whileHover={{ scaleX: 1 }}
-              transition={{ duration: 0.3 }}
-            />
-            <FaCameraRetro className="text-[#bfa76a] text-2xl mb-2" />
-            <span className="text-white font-semibold text-lg">{item.category}</span>
-          </div>
         </motion.div>
       ))}
     </motion.div>

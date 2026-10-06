@@ -6,7 +6,7 @@ import { ChampagneIllustration } from "../Illustrations";
 
 export default function HeroSection() {
   return (
-    <motion.section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.9 }}>
+    <motion.section className="relative w-full min-h-[70vh] pt-28 pb-12 flex items-center justify-center overflow-hidden" initial={{ opacity: 0, filter: "blur(10px)" }} whileInView={{ opacity: 1, filter: "blur(0px)" }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.9 }}>
       <div className="absolute inset-0">
         <Image
           src="/img15.jpg"
