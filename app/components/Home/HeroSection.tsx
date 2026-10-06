@@ -29,7 +29,7 @@ export default function HeroSection() {
           className="object-cover"
           priority
           sizes="100vw"
-          quality={85}
+          quality={75}
         />
       </motion.div>
 
@@ -50,7 +50,7 @@ export default function HeroSection() {
       >
         {/* Heading */}
         <motion.h1
-          className="font-serif font-black text-white text-5xl sm:text-7xl md:text-8xl leading-tight mb-4 drop-shadow-2xl"
+          className="font-serif font-black text-white text-[clamp(40px,8vw,56px)] sm:text-6xl md:text-7xl lg:text-8xl leading-tight mb-4 drop-shadow-2xl"
           style={{ letterSpacing: "0.04em" }}
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -145,13 +145,13 @@ export default function HeroSection() {
         <motion.div
           className="w-px h-10 bg-linear-to-b from-[#bfa76a] to-transparent"
           animate={{ scaleY: [1, 0.4, 1], opacity: [0.7, 0.3, 0.7] }}
-          transition={{ duration: 1.8}}
+          transition={{ duration: 1.8 }}
         />
       </motion.div>
 
-      <div className="absolute bottom-0 left-0 w-full z-20">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none" height="60">
-          <path d="M0 60 L0 30 Q360 0 720 30 Q1080 60 1440 30 L1440 60 Z" fill="#FEFAE0"/>
+      <div className="absolute -bottom-px left-0 w-full z-20">
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-15" preserveAspectRatio="none">
+          <path d="M0 60 L0 30 Q360 0 720 30 Q1080 60 1440 30 L1440 60 Z" fill="#FEFAE0" />
         </svg>
       </div>
     </motion.section>

@@ -112,7 +112,7 @@ export default function AudioPlayer() {
       {/* Sound Control  */}
       <motion.button
         onClick={togglePlay}
-        className="fixed right-4 top-1/2 -translate-y-1/2 z-[100] w-12 h-12 rounded-full bg-gradient-to-br from-[#bfa76a] to-[#8b7355] shadow-lg shadow-[#bfa76a]/30 flex items-center justify-center group hover:scale-110 transition-transform"
+        className="fixed right-4 top-1/2 -translate-y-1/2 z-100 w-10 h-10 md:w-12 md:h-12 rounded-full bg-linear-to-br from-[#bfa76a] to-[#8b7355] shadow-lg shadow-[#bfa76a]/30 flex items-center justify-center group hover:scale-110 transition-transform"
         initial={{ x: 20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.6 }}
@@ -158,7 +158,7 @@ export default function AudioPlayer() {
       */}
       <motion.button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="fixed right-4 top-1/2 translate-y-10 z-[100] w-12 h-12 rounded-full bg-gradient-to-br from-[#bfa76a] to-[#8b7355] shadow-lg shadow-[#bfa76a]/30 flex items-center justify-center hover:scale-110 transition-transform"
+        className="fixed right-4 top-1/2 translate-y-8 md:translate-y-10 z-100 w-10 h-10 md:w-12 md:h-12 rounded-full bg-linear-to-br from-[#bfa76a] to-[#8b7355] shadow-lg shadow-[#bfa76a]/30 flex items-center justify-center hover:scale-110 transition-transform"
         initial={{ x: 20, opacity: 0 }}
         animate={{ x: 0, opacity: 1, rotate: isExpanded ? 180 : 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
@@ -197,7 +197,7 @@ export default function AudioPlayer() {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 400, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed right-4 top-[15%] z-[99] w-96 max-h-[70vh] bg-gradient-to-br from-[#1a1a1a] to-[#2a2520] rounded-2xl shadow-2xl shadow-[#bfa76a]/20 border border-[#bfa76a]/30 overflow-hidden"
+            className="fixed right-4 top-[10%] md:top-[15%] z-99 w-[calc(100vw-2rem)] md:w-96 max-w-[360px] max-h-[70vh] bg-linear-to-br from-[#1a1a1a] to-[#2a2520] rounded-2xl shadow-2xl shadow-[#bfa76a]/20 border border-[#bfa76a]/30 overflow-hidden"
           >
             {/* Card Header */}
             <div className="bg-[#6d2622] p-4 sticky top-0 z-10">

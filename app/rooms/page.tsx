@@ -10,6 +10,16 @@ import { FaBed, FaWifi, FaTv, FaSnowflake, FaCoffee, FaShower, FaCouch, FaConcie
 const roomsData = [
   {
     category: "Standard",
+    name: "Standard Non-AC Room",
+    image: "/img3.jpg",
+    price: "₹1,300",
+    size: "250 sq ft",
+    occupancy: "2 Adults",
+    features: ["Double Bed", "Free WiFi", "LED TV", "Non-AC", "Room Service"],
+    badge: null
+  },
+  {
+    category: "Standard",
     name: "Standard AC Room",
     image: "/img1.jpg",
     price: "₹1,700",
@@ -19,14 +29,14 @@ const roomsData = [
     badge: null
   },
   {
-    category: "Standard",
-    name: "Standard Non-AC Room",
-    image: "/img3.jpg",
-    price: "₹1,300",
-    size: "250 sq ft",
-    occupancy: "2 Adults",
-    features: ["Double Bed", "Free WiFi", "LED TV", "Non-AC", "Room Service"],
-    badge: null
+    category: "Deluxe",
+    name: "Deluxe AC Room",
+    image: "/img11.jpg",
+    price: "₹2,500",
+    size: "300 sq ft",
+    occupancy: "2 Adults, 1 Child",
+    features: ["King Size Bed", "Free WiFi", "Smart TV", "AC", "Mini Fridge"],
+    badge: "Most Popular"
   }
 ];
 
@@ -56,7 +66,7 @@ export default function Rooms() {
       <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=1074&auto=format&fit=crop"
+            src="/img12.jpg"
             alt="Hotel Room"
             fill
             className="object-cover"
@@ -140,18 +150,17 @@ export default function Rooms() {
                 layout
                 className="bg-white rounded-2xl shadow-xl overflow-hidden h-full border-2 border-transparent hover:border-[#bfa76a] transition-all"
               >
-                <a
-                  href={`https://wa.me/918984909990?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20booking%20the%20${encodeURIComponent(room.name)}%20at%20Hotel%20Goldy%20Premium.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-sm border border-[#bfa76a]/60 text-[#bfa76a] hover:bg-[#bfa76a] hover:text-white transition-all duration-300 shadow-lg hover:scale-110 active:scale-95"
-                  aria-label="Book on WhatsApp"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  <FaWhatsapp className="w-5 h-5" />
-                </a>
-                
                 <div className="relative h-56 overflow-hidden">
+                  <a
+                    href={`https://wa.me/918984909990?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20booking%20the%20${encodeURIComponent(room.name)}%20at%20Hotel%20Goldy%20Premium.`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute top-4 right-4 z-20 w-10 h-10 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-sm border border-[#bfa76a]/60 text-[#bfa76a] hover:bg-[#bfa76a] hover:text-white transition-all duration-300 shadow-md hover:scale-110 active:scale-95"
+                    aria-label="Book on WhatsApp"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <FaWhatsapp className="w-5 h-5" />
+                  </a>
                   <Image
                     src={room.image}
                     alt={room.name}
