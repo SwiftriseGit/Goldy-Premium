@@ -30,7 +30,7 @@ export default function ExperienceSection() {
             Our hotel blends modern luxury with classic elegance, offering you a peaceful retreat. Enjoy spacious rooms, world-class amenities, and personalized service.
           </p>
           <div className="flex flex-wrap gap-3 mb-8">
-            {['Free Wi-Fi', 'Room Service', 'Spa & Pool', '24/7 Support'].map((f, i) => (
+            {['Free Wi-Fi', 'Room Service', '24/7 Support'].map((f, i) => (
               <motion.span
                 key={i}
                 className="inline-flex items-center gap-1.5 bg-white/10 border border-[#bfa76a]/40 text-white/80 text-xs px-4 py-2 rounded-full tracking-wide"

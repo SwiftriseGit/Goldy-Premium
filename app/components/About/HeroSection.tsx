@@ -18,9 +18,6 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-black/70" />
       </div>
 
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 opacity-30">
-        <CrownIllustration className="w-20 h-20" />
-      </div>
 
       <motion.div
         className="relative z-10 text-center px-4 max-w-4xl"

@@ -21,7 +21,7 @@ const roomsData = [
   {
     category: "Deluxe",
     name: "Deluxe AC Room",
-    image: "/img1.jpg",
+    image: "/deluxe-ac-room.jpeg",
     price: "₹1,700",
     size: "200 sq ft",
     occupancy: "2 Adults",

@@ -19,7 +19,7 @@ export default function MapSection() {
         <MotionSection direction="scale">
           <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-[#bfa76a]/20">
             <iframe
-              src="https://maps.google.com/maps?q=LIC%20Office,%20Near%20Branch,%20Near%20JMD%20Dhaba,%20Back%20Side,%20Jeypore,%20Odisha&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?q=18.873985290527344,82.56144714355469&t=&z=17&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="450"
               style={{ border: 0 }}

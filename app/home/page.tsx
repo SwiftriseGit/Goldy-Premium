@@ -14,8 +14,7 @@ export default function Home() {
       <LuxurySection />
       <ExperienceSection />
       <QuickCTABlocks />
-      {/* <FeaturedMoments />
-      <BanquetHalls /> */}
+      
       <GallerySection />
     </main>
   );

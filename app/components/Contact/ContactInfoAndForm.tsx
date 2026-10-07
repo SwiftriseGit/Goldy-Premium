@@ -42,7 +42,7 @@ export default function ContactInfoAndForm() {
             icon: <FaMapMarkerAlt />,
             title: "Address",
             value: "Lingaraj Nagar, Jeypore, Odisha 764002",
-            link: "https://maps.google.com/?q=Lingaraj+Nagar+Jeypore",
+            link: "https://www.google.com/maps?q=18.873985290527344,82.56144714355469&z=17&hl=en",
             color: "#bfa76a"
           },
           {
