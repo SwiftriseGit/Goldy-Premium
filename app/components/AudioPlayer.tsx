@@ -197,10 +197,10 @@ export default function AudioPlayer() {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: 400, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed right-4 top-[10%] md:top-[15%] z-99 w-[calc(100vw-2rem)] md:w-96 max-w-[360px] max-h-[70vh] bg-linear-to-br from-[#1a1a1a] to-[#2a2520] rounded-2xl shadow-2xl shadow-[#bfa76a]/20 border border-[#bfa76a]/30 overflow-hidden"
+            className="fixed right-16 md:right-20 top-1/2 -translate-y-1/2 z-99 w-[calc(100vw-5rem)] md:w-96 max-w-[360px] max-h-[85vh] flex flex-col bg-linear-to-br from-[#1a1a1a] to-[#2a2520] rounded-2xl shadow-2xl shadow-[#bfa76a]/20 border border-[#bfa76a]/30 overflow-hidden"
           >
             {/* Card Header */}
-            <div className="bg-[#6d2622] p-4 sticky top-0 z-10">
+            <div className="bg-linear-to-r from-[#2a2520] to-[#1a1a1a] border-b border-[#bfa76a]/30 p-4 shrink-0 z-10">
               {/*
                 Header layout: icon + title centered.
                 - Icon: simple building/hotel SVG for visual cue.
@@ -236,7 +236,7 @@ export default function AudioPlayer() {
             </div>
 
             {/* Scrollable Card Content */}
-            <div className="overflow-y-auto max-h-[calc(70vh-80px)] scrollbar-thin scrollbar-thumb-[#bfa76a] scrollbar-track-[#2a2520]">
+            <div className="overflow-y-auto flex-1 scrollbar-thin scrollbar-thumb-[#bfa76a] scrollbar-track-[#2a2520]">
               <div className="p-6 space-y-5">
                 {/*
                   Owner Image

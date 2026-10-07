@@ -1,10 +1,15 @@
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaClock } from "react-icons/fa";
+"use client";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaClock, FaArrowUp } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="w-full bg-linear-to-b from-[#732824] to-[#1a0a09] text-white">
+    <footer className="w-full bg-linear-to-b from-[#732824] to-[#1a0a09] text-white relative">
       {/* Top Decorative Line */}
       <div className="w-full h-1 bg-linear-to-r from-transparent via-[#bfa76a] to-transparent"></div>
       
@@ -197,6 +202,13 @@ export default function Footer() {
             <a href="/terms-conditions" className="hover:text-[#bfa76a] transition-colors duration-200">
               Terms & Conditions
             </a>
+            <button
+              onClick={scrollToTop}
+              className="ml-2 md:ml-4 bg-[#bfa76a] text-[#1a0a09] w-8 h-8 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-md hover:scale-110 transform"
+              aria-label="Scroll to top"
+            >
+              <FaArrowUp className="text-sm" />
+            </button>
           </div>
         </div>
       </div>
